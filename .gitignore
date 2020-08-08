@@ -1,0 +1,8 @@
+dconf
+gtk*
+htop
+mc
+pulse
+pavucontrol.ini
+.elfeed
+!.elfeed/elfeed.org
