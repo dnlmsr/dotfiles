@@ -18,14 +18,26 @@
 #PS1 configuration
 PS1='\[\e[01;33m\]┌─[\[\e[01;32m\]\u\[\e[00m\]:\[\e[1;34m\]\w\[\e[01;33m\]]\n└─╼ \[\e[0m\]'
 
-case ${TERM} in
-  xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
-    PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
+[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
-    ;;
-  screen*)
-    PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033_%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
-    ;;
-esac
+# Aliases
 
-[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+# ls aliases
+alias ls='ls -a --color=auto'
+alias la='ls -alh --color=auto'
+
+# Networking tools
+alias ping='ping -c 5'
+alias ipw='curl ipinfo.io/ip'
+
+# sudo commands
+alias pacman='sudo pacman'
+alias poweroff='sudo poweroff'
+alias reboot='sudo reboot'
+
+alias untar='tar -zxvf'
+alias mkdir='mkdir -pv'
+
+# termial aliases
+alias c='clear'
+alias q='exit'
