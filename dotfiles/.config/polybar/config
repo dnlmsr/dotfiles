@@ -50,7 +50,7 @@ font-2 = Siji:size=8;1
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = backlight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -61,8 +61,7 @@ tray-padding = 2
 
 ;wm-restack = i3
 
-;override-redirect = tru
-e
+;override-redirect = true
 
 
 ;scroll-up = bspwm-desknext
@@ -165,22 +164,20 @@ icon-next = 
 label-song-maxlen = 25
 label-song-ellipsis = true
 
-[module/xbacklight]
+[module/backlight]
 type = internal/xbacklight
+card = intel_backlight
+enable-scroll = true
 
 format = <label> <ramp>
 label = BL
 
-ramp-0 = 🌕
-ramp-1 = 🌔
+ramp-4 = 🌕
+ramp-3 = 🌔
 ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
+ramp-1 = 🌒
+ramp-0 = 🌑
 
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
