@@ -1,0 +1,3 @@
+configuration {
+modi: "window,run,combi";
+}@import "/usr/share/rofi/themes/Monokai.rasi"
