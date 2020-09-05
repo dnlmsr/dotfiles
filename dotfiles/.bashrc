@@ -16,7 +16,11 @@
 [[ $DISPLAY ]] && shopt -s checkwinsize
 
 # PS1 configuration
-PS1='\[\e[01;33m\]┌─[\[\e[32m\]\u\[\e[00m\]:\[\e[34m\]\w\[\e[01;33m\]]\n└─╼ \[\e[0m\]'
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+export PS1='\[\e[01;33m\]┌─[\[\e[32m\]\u\[\e[00m\]:\[\e[34m\]\w\[\e[01;33m\]] \[\e[01;31m\]$(parse_git_branch)\[\e[01;33m\]\n└─╼ \[\e[0m\]'
 
 # bash autocompletion
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
