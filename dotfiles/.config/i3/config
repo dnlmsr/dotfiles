@@ -191,8 +191,6 @@ bindsym $mod+r mode "resize"
 
 bindsym Print exec flameshot
 
-floating_minimum_size 70 x 50
-floating_maximum_size 400 x 300
 
 client.focused #228b22 #228b22 #ffffff #2e9ef4 #228b22
 

@@ -25,6 +25,10 @@ export PS1='\[\e[01;33m\]┌─[\[\e[32m\]\u\[\e[00m\]:\[\e[34m\]\w\[\e[01;33m\]
 # bash autocompletion
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
+# Emacs client
+export EDITOR="emacsclient -t -a ''"      # $EDITOR use Emacs in terminal
+export VISUAL="emacsclient -c -a 'emacs'"   # $VISUAL use Emacs in GUI mode
+
 # shopt
 shopt -s autocd # change to named directory
 shopt -s cdspell # autocorrects cd misspellings
@@ -61,8 +65,8 @@ ex ()
 ### ALIASES ###
 
 # ls aliases
-alias ls='ls -A --color=auto'
-alias la='ls -Alh --color=auto'
+alias ls='exa -lah --color=always --group-directories-first'
+alias lt='exa -aT --color=always --group-directories-first'
 
 # networking tools
 alias ping='ping -c 5'
@@ -92,4 +96,10 @@ alias gc='git commit'
 alias gd='git diff'
 alias gco='git checkout '
 
-alias emacs='emacsclient'
+# emacs clients
+alias em="emacsclient -nw -a ''"
+alias emacs="emacsclient -c -a 'emacs'"
+
+# colored cat
+alias cat="bat"
+alias catp="bat --style=plain "

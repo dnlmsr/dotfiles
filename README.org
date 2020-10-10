@@ -10,3 +10,6 @@
 - flameshot
 - termite
 - rofi
+- exa
+- bat
+- emacs/spacemacs
