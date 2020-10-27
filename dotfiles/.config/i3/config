@@ -41,8 +41,7 @@ exec --no-startup-id nitrogen --restore
 # Polybar startup
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# Start emacs daemon
-exec emacs --daemon
+# Emacsclient binding
 bindsym $mod+x exec emacsclient -create-frame --alternate-editor=""
 
 # Use pactl to adjust volume in PulseAudio.

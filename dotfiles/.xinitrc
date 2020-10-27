@@ -10,8 +10,11 @@
 #
 # ~/.xinitrc
 
-#Set keyboard layout
+# Set keyboard layout
 setxkbmap it
 
-#Start i3wm
+# Start udiskie daemon
+udiskie -Nt &
+
+# Start i3wm
 exec i3
