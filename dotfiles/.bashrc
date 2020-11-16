@@ -87,6 +87,8 @@ alias c='clear'
 alias q='exit'
 alias h='history'
 alias wdil='history|grep '
+alias tb='nc termbin.com 9999'
+alias tbc='nc termbin.com 9999 | xclip -selection c'
 
 # git aliases
 alias gs='git status '
