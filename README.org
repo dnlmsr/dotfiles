@@ -8,7 +8,7 @@
 - nitrogen
 - i3wm
 - flameshot
-- termite
+- rxvt
 - rofi
 - exa
 - bat

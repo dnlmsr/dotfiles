@@ -6,10 +6,10 @@
 !.gitconfig
 !.spacemacs
 !.xinitrc
+!.Xresources
 !flameshot.ini
 !i3
 !nitrogen
 !polybar
 !rofi
-!termite
 !systemd
