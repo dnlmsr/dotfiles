@@ -105,3 +105,8 @@ alias emacs="emacsclient -c -a 'emacs'"
 # colored cat
 alias cat="bat"
 alias catp="bat --style=plain "
+
+# grep autocolor
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
