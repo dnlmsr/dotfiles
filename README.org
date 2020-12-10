@@ -7,7 +7,7 @@
 - polybar
 - nitrogen
 - i3wm
-- flameshot
+- maim
 - rxvt
 - rofi
 - exa
