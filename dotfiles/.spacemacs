@@ -54,6 +54,7 @@ values."
      ;; better-defaults
      emacs-lisp
      git
+     c-c++
      ;; markdown
      org
      ;; (shell :variables
@@ -67,6 +68,14 @@ values."
      emoji
      colors
      themes-megapack
+     erc
+     python
+     (erc :variables
+            erc-server-list
+            '(("irc.freenode.net"
+               :port "6697"
+               :ssl t
+               :nick "Mosis99")))
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -74,7 +83,9 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(neotree
                                       all-the-icons
-                                      speed-type)
+                                      yasnippet-snippets
+                                      arduino-mode
+                                      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -341,6 +352,12 @@ you should place your code here."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(csv-separators '(";"))
+ '(erc-autojoin-channels-alist
+   '(("freenode.net" "#archlinux" "##linux" "#latex" "#kicad")))
+ '(erc-fill-function 'erc-fill-static)
+ '(erc-fill-static-center 20)
+ '(erc-hide-list '("JOIN" "PART" "QUIT"))
+ '(erc-user-full-name "Daniele Moser")
  '(ledger-reports
    '(("clr" "%(binary) -f %(ledger-file) cleared")
      ("net" "%(binary) -f %(ledger-file) cleared Assets Liabilities")
