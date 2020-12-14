@@ -1,6 +1,0 @@
-* Blogs                                                              :elfeed:
-** Cronaca locale
-*** https://www.ladige.it/rss.xml
-*** https://www.giornaletrentino.it/cmlink/cronaca-lavis-e-rotaliana-1.389
-** Tech
-*** https://www.tomshardware.com/feeds/all

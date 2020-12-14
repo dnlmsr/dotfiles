@@ -63,7 +63,6 @@ values."
      syntax-checking
      ;; version-control
      latex
-     elfeed
      finance
      emoji
      colors
@@ -75,7 +74,6 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(neotree
                                       all-the-icons
-                                      elfeed-org
                                       speed-type)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -333,7 +331,6 @@ you should place your code here."
   (setq powerline-default-separator 'arrow)
   (setq neo-theme
         'icons)
-  (setq rmh-elfeed-org-files (list "~/.elfeed/elfeed.org"))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

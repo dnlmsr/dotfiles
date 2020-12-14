@@ -1,6 +1,5 @@
 /dotfiles/*
 !.backgrounds
-!.elfeed
 !.bash_profile
 !.bashrc
 !.gitconfig
