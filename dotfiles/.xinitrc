@@ -22,5 +22,8 @@ xset r rate 200 30
 # Start udiskie daemon
 udiskie -Nt &
 
+# Start pulseaudio tray
+pasystray &
+
 # Start i3wm
 exec i3
