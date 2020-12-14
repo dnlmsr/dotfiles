@@ -347,7 +347,9 @@ you should place your code here."
      ("bal" "%(binary) -f %(ledger-file) bal")
      ("reg" "%(binary) -f %(ledger-file) reg")
      ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
-     ("account" "%(binary) -f %(ledger-file) reg %(account)"))))
+     ("account" "%(binary) -f %(ledger-file) reg %(account)")))
+ '(scroll-margin 5)
+)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
