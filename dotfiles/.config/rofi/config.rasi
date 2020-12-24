@@ -1,3 +1,4 @@
 configuration {
 modi: "window,run,combi";
+font: "Source Code Pro 12";
 }@import "/usr/share/rofi/themes/Monokai.rasi"
