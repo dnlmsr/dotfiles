@@ -38,3 +38,6 @@
 ! Urxvt
 URxvt.scrollBar:	0
 URxvt.font:	xft:SauceCodePro Nerd Font:12
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
