@@ -20,19 +20,24 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-export PS1='\[\e[01;33m\]┌─[\[\e[32m\]\u\[\e[00m\]:\[\e[34m\]\w\[\e[01;33m\]] \[\e[01;31m\]$(parse_git_branch)\[\e[01;33m\]\n└─╼ \[\e[0m\]'
+export PS1='\[\e[1;33m\]┌─[\[\e[32m\]\u\[\e[0m\]:\[\e[34m\]\w\[\e[1;33m\]] \[\e[1;31m\]$(parse_git_branch)\[\e[1;33m\]\n└─╼ \[\e[0m\]'
 
 # bash autocompletion
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
 # Emacs client
-export EDITOR="emacsclient -t -a ''"      # $EDITOR use Emacs in terminal
-export VISUAL="emacsclient -c -a 'emacs'"   # $VISUAL use Emacs in GUI mode
+export EDITOR="emacsclient -t -a 'nvim'"      # $EDITOR use Emacs in terminal
+export VISUAL="emacsclient -c -a 'nvim'"   # $VISUAL use Emacs in GUI mode
 
 # shopt
 shopt -s autocd # change to named directory
 shopt -s cdspell # autocorrects cd misspellings
 shopt -s histappend # do not overwrite history
+
+set -o vi
+bind 'set show-mode-in-prompt on'
+bind 'set vi-ins-mode-string \1\e[5 q\e]12;green\a\2'
+bind 'set vi-cmd-mode-string \1\e[2 q\e]12;orange\a\2'
 
 ### ARCHIVE EXTRACTION ###
 # usage: ex <file>
