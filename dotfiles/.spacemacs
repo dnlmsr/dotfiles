@@ -65,11 +65,9 @@ values."
      ;; version-control
      latex
      finance
-     emoji
      colors
      themes-megapack
      erc
-     python
      (erc :variables
             erc-server-list
             '(("irc.freenode.net"
@@ -81,10 +79,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(neotree
-                                      all-the-icons
-                                      yasnippet-snippets
-                                      arduino-mode
+   dotspacemacs-additional-packages '(yasnippet-snippets
                                       )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
