@@ -41,39 +41,24 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     csv
-     ;; html
      python
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
      helm
      auto-completion
-     ;; better-defaults
      emacs-lisp
      git
      c-c++
-     ;; markdown
      org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
      spell-checking
      syntax-checking
-     ;; version-control
      latex
      finance
      colors
      themes-megapack
-     erc
-     (erc :variables
-            erc-server-list
-            '(("irc.freenode.net"
-               :port "6697"
-               :ssl t
-               :nick "Mosis99")))
+     ranger
+     gtags
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -346,13 +331,6 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(csv-separators '(";"))
- '(erc-autojoin-channels-alist
-   '(("freenode.net" "#archlinux" "##linux" "#latex" "#kicad")))
- '(erc-fill-function 'erc-fill-static)
- '(erc-fill-static-center 20)
- '(erc-hide-list '("JOIN" "PART" "QUIT"))
- '(erc-user-full-name "Daniele Moser")
  '(ledger-reports
    '(("clr" "%(binary) -f %(ledger-file) cleared")
      ("net" "%(binary) -f %(ledger-file) cleared Assets Liabilities")
