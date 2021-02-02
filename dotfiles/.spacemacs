@@ -319,6 +319,16 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (defun clang-format-buffer-smart-on-save ()
+    (add-hook 'before-save-hook 'clang-format-buffer nil t))
+  (spacemacs/add-to-hooks 'clang-format-buffer-smart-on-save
+                          '(c-mode-hook c++-mode-hook))
+
+  (defun python-black-buffer-smart-on-save ()
+    (add-hook 'before-save-hook 'python-black-buffer nil t))
+  (spacemacs/add-to-hooks 'python-black-buffer-smart-on-save
+                          '(python-mode-hook))
+
   (setq powerline-default-separator 'arrow)
   (setq neo-theme
         'icons)
