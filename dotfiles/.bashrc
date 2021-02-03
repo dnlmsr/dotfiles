@@ -20,7 +20,7 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-export PS1='\[\e[1;33m\]┌─[\[\e[32m\]\u\[\e[0m\]:\[\e[34m\]\w\[\e[1;33m\]] \[\e[1;31m\]$(parse_git_branch)\[\e[1;33m\]\n└─╼ \[\e[0m\]'
+export PS1='\[\e[1;33m\]┌─[\[\e[32m\]\u\[\e[0m\]:\[\e[34m\]\w\[\e[1;33m\]] \[\e[1;31m\]$(parse_git_branch)\[\e[1;33m\]\n'
 
 # bash autocompletion
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
@@ -36,8 +36,8 @@ shopt -s histappend # do not overwrite history
 
 set -o vi
 bind 'set show-mode-in-prompt on'
-bind 'set vi-ins-mode-string \1\e[5 q\e]12;green\a\2'
-bind 'set vi-cmd-mode-string \1\e[2 q\e]12;orange\a\2'
+bind 'set vi-ins-mode-string "\1\e[1;32m\2└─╼ \1\e[0m\2"'
+bind 'set vi-cmd-mode-string "\1\e[1;33m\2└─╼ \1\e[0m\2"'
 
 ### ARCHIVE EXTRACTION ###
 # usage: ex <file>
