@@ -343,6 +343,7 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(ledger-reports
    '(("clr" "%(binary) -f %(ledger-file) cleared")
+     ("bud" "%(binary) -f %(ledger-file) --budget --monthly register Expenses")
      ("net" "%(binary) -f %(ledger-file) cleared Assets Liabilities")
      ("bal" "%(binary) -f %(ledger-file) bal")
      ("reg" "%(binary) -f %(ledger-file) reg")
