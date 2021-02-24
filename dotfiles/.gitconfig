@@ -5,3 +5,5 @@
 	editor = vim
 [commit]
 	gpgSign = true
+[merge]
+	ff = false
