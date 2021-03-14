@@ -65,6 +65,7 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(yasnippet-snippets
+                                      exec-path-from-shell
                                       )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -332,6 +333,7 @@ you should place your code here."
   (setq powerline-default-separator 'arrow)
   (setq neo-theme
         'icons)
+  (exec-path-from-shell-initialize)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
