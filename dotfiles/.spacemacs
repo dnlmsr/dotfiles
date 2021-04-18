@@ -53,7 +53,8 @@ values."
             shell-default-position 'bottom)
      spell-checking
      syntax-checking
-     latex
+     (latex :variables latex-backend 'lsp)
+     lsp
      finance
      colors
      themes-megapack
