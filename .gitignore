@@ -1,5 +1,4 @@
 /dotfiles/.config/*
-!flameshot.ini
 !i3
 !nitrogen
 !polybar
