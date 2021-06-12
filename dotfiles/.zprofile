@@ -8,10 +8,9 @@
 # Daniele Moser
 # dnlmsr0@gmail.com
 #
-# ~/.bash_profile
+# ~/.zprofile
 
 # Start X.org at login
-[[ -f ~/.bashrc ]] && . ~/.bashrc
-if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+    exec startx
 fi
