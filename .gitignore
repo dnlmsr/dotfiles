@@ -1,11 +1,4 @@
-/dotfiles/*
-!.backgrounds
-!.bash_profile
-!.bashrc
-!.gitconfig
-!.spacemacs
-!.xinitrc
-!.Xresources
+/dotfiles/.config/*
 !flameshot.ini
 !i3
 !nitrogen
