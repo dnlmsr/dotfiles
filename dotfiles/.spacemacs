@@ -539,19 +539,7 @@ See the header of this file for more information."
 This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
-If you are unsure, try setting them in `dotspacemacs/user-config' first."
-
-  '(ledger-reports
-    '(("clr" "%(binary) -f %(ledger-file) cleared")
-      ("bud" "%(binary) -f %(ledger-file) --budget --monthly register Expenses")
-      ("net" "%(binary) -f %(ledger-file) cleared Assets Liabilities")
-      ("bal" "%(binary) -f %(ledger-file) bal")
-      ("reg" "%(binary) -f %(ledger-file) reg")
-      ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
-      ("account" "%(binary) -f %(ledger-file) reg %(account)")))
-
-  '(scroll-margin 5)
-  )
+If you are unsure, try setting them in `dotspacemacs/user-config' first.")
 
 
 (defun dotspacemacs/user-load ()
@@ -579,6 +567,17 @@ before packages are loaded."
                           '(python-mode-hook))
 
   (exec-path-from-shell-initialize)
+
+  (setq scroll-margin 5)
+
+  (setq ledger-reports
+        '(("clr" "%(binary) -f %(ledger-file) cleared")
+          ("bud" "%(binary) -f %(ledger-file) --budget --monthly register Expenses")
+          ("net" "%(binary) -f %(ledger-file) cleared Assets Liabilities")
+          ("bal" "%(binary) -f %(ledger-file) bal")
+          ("reg" "%(binary) -f %(ledger-file) reg")
+          ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
+          ("account" "%(binary) -f %(ledger-file) reg %(account)")))
   )
 
 
