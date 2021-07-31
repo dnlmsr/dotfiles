@@ -75,6 +75,8 @@ plugins=(
 	vi-mode
 	fzf
   emacs
+  transfer
+  git-flow
 )
 
 source $ZSH/oh-my-zsh.sh
