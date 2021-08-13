@@ -13,9 +13,6 @@
 # Set keyboard layout
 setxkbmap it
 
-# Load Xresources
-[[ -f ~/.Xresources ]] && xrdb ~/.Xresources
-
 # Xorg keyboard rate
 xset r rate 200 30
 
@@ -24,6 +21,9 @@ udiskie -Nt &
 
 # Start pulseaudio tray
 pasystray &
+
+# Set background
+~/.config/fehbg.sh &
 
 # Start i3wm
 exec i3
