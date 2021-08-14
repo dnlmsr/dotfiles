@@ -22,6 +22,9 @@ udiskie -Nt &
 # Start pulseaudio tray
 pasystray &
 
+# Set screen
+autorandr -c
+
 # Set background
 ~/.config/fehbg.sh &
 
