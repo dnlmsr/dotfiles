@@ -64,6 +64,9 @@ This function should only modify configuration layer settings."
      themes-megapack
      gtags
      latex
+     html
+     csv
+     yaml
      )
 
 
@@ -78,6 +81,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(
                                       yasnippet-snippets
                                       exec-path-from-shell
+                                      python-black
                                       )
 
    ;; A list of packages that cannot be updated.
