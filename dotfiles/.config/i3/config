@@ -35,11 +35,26 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Nitrogen background
-exec --no-startup-id nitrogen --restore
-
 # Polybar startup
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Set keyboard layout
+exec setxkbmap it
+
+# Xorg keyboard rate
+exec xset r rate 200 30
+
+# Start udiskie daemon
+exec --no-startup-id udiskie -Nt &
+
+# Start pulseaudio tray
+exec pasystray &
+
+# Set background
+exec_always --no-startup-id feh --no-fehbg --bg-fill '/home/daniele/dotfiles/dotfiles/.backgrounds/western.png' &
+
+# Set screen
+exec autorandr -c
 
 # Emacsclient binding
 bindsym $mod+x exec emacsclient -create-frame --alternate-editor=""

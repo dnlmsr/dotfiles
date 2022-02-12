@@ -10,23 +10,5 @@
 #
 # ~/.xinitrc
 
-# Set keyboard layout
-setxkbmap it
-
-# Xorg keyboard rate
-xset r rate 200 30
-
-# Start udiskie daemon
-udiskie -Nt &
-
-# Start pulseaudio tray
-pasystray &
-
-# Set screen
-autorandr -c
-
-# Set background
-~/.config/fehbg.sh &
-
 # Start i3wm
 exec i3
