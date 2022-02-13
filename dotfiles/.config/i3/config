@@ -10,33 +10,15 @@
 #
 # ~/.config/i3/config
 
-# i3 config file (v4)
-#
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+###############################################################################
+#                              Basic screen setup                             #
+###############################################################################
 
-set $mod Mod4
+# Set xrandr and wallpaper
+exec autorandr -c && xwallpaper --zoom ~/.backgrounds/western.png
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-font pango:monospace 8
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
-# Polybar startup
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# Set workspace 1 to bigger screen
+workspace 1 output HDMI-1
 
 # Set keyboard layout
 exec setxkbmap it
@@ -44,46 +26,41 @@ exec setxkbmap it
 # Xorg keyboard rate
 exec xset r rate 200 30
 
-# Start udiskie daemon
-exec --no-startup-id udiskie -Nt &
+###############################################################################
+#                           Polybar and tray applets                          #
+###############################################################################
 
-# Start pulseaudio tray
-exec pasystray &
+# Start network manager applet
+exec --no-startup-id nm-applet
 
-# Set screen
-exec autorandr -c && xwallpaper --zoom ~/.backgrounds/western.png
+# Start udiskie applet
+exec --no-startup-id udiskie -Nt
 
-workspace 1 output HDMI-1
+# Start pasystray applet
+exec --no-startup-id pasystray
 
-# Emacsclient binding
-bindsym $mod+x exec emacsclient -create-frame --alternate-editor=""
+# Polybar startup
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# Use pactl to adjust volume in PulseAudio.
+###############################################################################
+#                                 Keybindings                                 #
+###############################################################################
+
+# Set Super key to mod key
+set $mod Mod4
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# Use pactl to adjust volume in PulseAudio
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-
-# start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-
-# kill focused window
-bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show drun
-
-# Rofi calc
-bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
-
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -132,9 +109,6 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
-#bindsym $mod+d focus child
-
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -174,8 +148,10 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
@@ -206,9 +182,31 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Screenshot all screens
 bindsym Print exec maim -u | xclip -selection clipboard -t image/png -i
+bindsym Shift+Print exec maim --select | xclip -selection clipboard -t image/png -i
 
+# Emacsclient binding
+bindsym $mod+x exec emacsclient -create-frame --alternate-editor=""
 
+# start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec rofi -show drun
+
+# Rofi calc
+bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
+
+###############################################################################
+#                            Window configurations                            #
+###############################################################################
+
+# Set colors
 client.focused #228b22 #228b22 #ffffff #2e9ef4 #228b22
 
+# Set default font for titles
+font pango:monospace 8
+
+# Set border size
 new_window pixel 2
