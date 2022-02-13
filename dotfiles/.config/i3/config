@@ -50,11 +50,10 @@ exec --no-startup-id udiskie -Nt &
 # Start pulseaudio tray
 exec pasystray &
 
-# Set background
-exec_always --no-startup-id feh --no-fehbg --bg-fill '/home/daniele/dotfiles/dotfiles/.backgrounds/western.png' &
-
 # Set screen
-exec autorandr -c
+exec autorandr -c && xwallpaper --zoom ~/.backgrounds/western.png
+
+workspace 1 output HDMI-1
 
 # Emacsclient binding
 bindsym $mod+x exec emacsclient -create-frame --alternate-editor=""
