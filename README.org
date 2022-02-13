@@ -2,14 +2,4 @@
 #+AUTHOR: Daniele Moser
 #+EMAIL: dnlmsr0@gmail.com
 * Requirements
-- Xorg
-- xinit
-- polybar
-- nitrogen
-- i3wm
-- maim
-- rxvt
-- rofi
-- exa
-- bat
-- emacs/spacemacs
+For requirements see `requirements.txt`

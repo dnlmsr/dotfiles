@@ -1,0 +1,12 @@
+neovim
+emacs
+xorg-xserver
+xorg-xinit
+xwallpaper
+i3-gaps
+rofi
+rofi-calc
+maim
+kitty
+udisks2
+udiskie
