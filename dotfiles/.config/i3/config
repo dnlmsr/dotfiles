@@ -183,8 +183,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Screenshot all screens
-bindsym Print exec maim -u | xclip -selection clipboard -t image/png -i
-bindsym Shift+Print exec maim --select | xclip -selection clipboard -t image/png -i
+bindsym XF86LaunchB exec maim -u | xclip -selection clipboard -t image/png -i
+bindsym Shift+XF86LaunchB exec maim --select | xclip -selection clipboard -t image/png -i
 
 # Emacsclient binding
 bindsym $mod+x exec emacsclient -create-frame --alternate-editor=""
