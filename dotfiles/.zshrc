@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/mnt/hdd/texlive/2021/bin/x86_64-linux:$PATH
+export MANPATH=/mnt/hdd/texlive/2021/texmf-dist/doc/man:$PATH
+export INFOPATH=/mnt/hdd/texlive/2021/texmf-dist/doc/info:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/daniele/.oh-my-zsh"
