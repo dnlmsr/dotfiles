@@ -48,7 +48,7 @@ This function should only modify configuration layer settings."
      python
      auto-completion
      emacs-lisp
-     git
+     (git :variables git-enable-magit-gitflow-plugin t)
      c-c++
      helm
      multiple-cursors
