@@ -79,7 +79,6 @@ plugins=(
   emacs
   transfer
   git-flow
-  ssh-agent
   gpg-agent
 )
 
