@@ -1,5 +1,8 @@
 #+TITLE: Dotfiles
 #+AUTHOR: Daniele Moser
 #+EMAIL: dnlmsr0@gmail.com
+
+This is a collection of my dotfiles. Use [[https://yadm.io][yadm]] if you want them nicely managed.
+
 * Requirements
-For requirements see `requirements.txt`
+For requirements see ~requirements.txt~.
