@@ -6,8 +6,12 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # Add user bin to PATH
 export PATH="$HOME/.local/bin:$PATH"
 
-# Set zsh config path
+# Set zsh paths
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export ZSH="$XDG_DATA_HOME/oh-my-zsh"
+export ZSH_CACHE="$XDG_CACHE_HOME/zsh"
+export HISTFILE="$ZSH_CACHE/history"
+export ZSH_COMPDUMP="$ZSH_CACHE/zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
 # Add texlive to PATHs
 export PATH=/mnt/hdd/texlive/2021/bin/x86_64-linux:$PATH
