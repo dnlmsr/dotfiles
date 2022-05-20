@@ -23,3 +23,7 @@ export LESSHISTFILE="$XDG_CACHE_HOME/lesshst"
 export PATH=/mnt/hdd/texlive/2021/bin/x86_64-linux:$PATH
 export MANPATH=/mnt/hdd/texlive/2021/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/mnt/hdd/texlive/2021/texmf-dist/doc/info:$INFOPATH
+
+# Set Taskwarrior paths
+export TASKRC="$XDG_CONFIG_HOME/task/taskrc"
+export TASKDATA="$XDG_DATA_HOME/task"
