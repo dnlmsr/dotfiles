@@ -17,7 +17,7 @@ export ZSH_COMPDUMP="$ZSH_CACHE/zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
 # Set other cluttering variables
-export LESSHISTFILE="$XDG_CACHE_HOME/lesshst"
+export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 
 # Add texlive to PATHs
 export PATH=/mnt/hdd/texlive/2021/bin/x86_64-linux:$PATH
@@ -27,3 +27,12 @@ export INFOPATH=/mnt/hdd/texlive/2021/texmf-dist/doc/info:$INFOPATH
 # Set Taskwarrior paths
 export TASKRC="$XDG_CONFIG_HOME/task/taskrc"
 export TASKDATA="$XDG_DATA_HOME/task"
+
+# Set Android studio path
+export ANDROID_HOME="$XDG_DATA_HOME/android"
+
+# Set java path
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+
+# Set X11 files path
+export ERRFILE="$XDG_CACHE_HOME/X11/xsession-errors"
