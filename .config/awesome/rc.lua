@@ -329,7 +329,13 @@ globalkeys = gears.table.join(
               {description = "show the menubar", group = "launcher"}),
 
     awful.key({modkey},"d", function() awful.spawn("rofi -show drun") end,
-              {description="run rofi launcher", group="launcher"})
+              {description="run rofi launcher", group="launcher"}),
+
+    -- Multimedia
+    awful.key({},"XF86AudioRaiseVolume", function() awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%") end,
+              {description="raise volume", group="multimedia"}),
+    awful.key({},"XF86AudioLowerVolume", function() awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%") end,
+              {description="lower volume", group="multimedia"})
 )
 
 clientkeys = gears.table.join(
