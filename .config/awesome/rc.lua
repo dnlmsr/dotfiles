@@ -331,6 +331,9 @@ globalkeys = gears.table.join(
     awful.key({modkey},"d", function() awful.spawn("rofi -show drun") end,
               {description="run rofi launcher", group="launcher"}),
 
+    awful.key({modkey},"e", function() awful.spawn("emacsclient -create-frame --alternate-editor='nvim'") end,
+              {description="run emacs", group="launcher"}),
+
     -- Multimedia
     awful.key({},"XF86AudioRaiseVolume", function() awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%") end,
               {description="raise volume", group="multimedia"}),
