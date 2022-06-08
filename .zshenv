@@ -36,3 +36,12 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 # Set X11 files path
 export ERRFILE="$XDG_CACHE_HOME/X11/xsession-errors"
+
+# Set platformio path
+export PLATFORMIO_CORE_DIR="$XDG_DATA_HOME/platformio"
+
+# Set ICEauthority path
+export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
+
+# Set java path
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
