@@ -47,6 +47,7 @@ This function should only modify configuration layer settings."
    '(
      python
      auto-completion
+     lua
      emacs-lisp
      (git :variables git-enable-magit-gitflow-plugin t)
      c-c++
