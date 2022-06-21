@@ -71,7 +71,6 @@ plugins=(
   emacs
   transfer
   git-flow
-  gpg-agent
 )
 
 source $ZSH/oh-my-zsh.sh
