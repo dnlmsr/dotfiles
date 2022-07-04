@@ -68,6 +68,7 @@ This function should only modify configuration layer settings."
      html
      csv
      yaml
+     rust
      )
 
 
