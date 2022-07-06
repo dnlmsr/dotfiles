@@ -10,5 +10,5 @@
 #
 # ~/.xinitrc
 
-# Start i3wm
-exec i3
+# Start WM
+exec awesome
