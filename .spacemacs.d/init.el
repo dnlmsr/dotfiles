@@ -45,12 +45,10 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     python
+     ;; Common to all profiles
      auto-completion
-     lua
      emacs-lisp
      (git :variables git-enable-magit-gitflow-plugin t)
-     c-c++
      helm
      multiple-cursors
      org
@@ -59,16 +57,21 @@ This function should only modify configuration layer settings."
             shell-default-position 'bottom)
      spell-checking
      syntax-checking
-     treemacs
-     finance
-     colors
      themes-megapack
-     gtags
-     latex
-     html
+     treemacs
+
+     ;; Profile specific
+     c-c++
+     colors
      csv
-     yaml
+     finance
+     gtags
+     html
+     latex
+     lua
+     python
      rust
+     yaml
      )
 
 
@@ -81,8 +84,11 @@ This function should only modify configuration layer settings."
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
+                                      ;; Common to all profiles
                                       yasnippet-snippets
                                       exec-path-from-shell
+
+                                      ;; Profile specific
                                       python-black
                                       )
 
