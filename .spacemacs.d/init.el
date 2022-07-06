@@ -62,11 +62,9 @@ This function should only modify configuration layer settings."
 
      ;; Profile specific
      c-c++
-     colors
      csv
      gtags
      html
-     javascript
      latex
      markdown
      python
