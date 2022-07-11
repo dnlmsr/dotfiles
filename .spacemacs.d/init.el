@@ -59,6 +59,7 @@ This function should only modify configuration layer settings."
      syntax-checking
      themes-megapack
      treemacs
+     unicode-fonts
 
      ;; Profile specific
      c-c++
