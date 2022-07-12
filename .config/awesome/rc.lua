@@ -579,3 +579,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.once("udiskie -Nt")
 awful.spawn.once("pasystray")
 awful.spawn.once("autorandr -c")
+awful.spawn.once("workrave")
