@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# This simple program downloads the latest emojis from unicode.org and put them in a cache file.
+# Then it uses rofi to select an emoji and outputs it to the clipboard.
+
+[ ! -f "$XDG_CACHE_HOME/emoji.txt" ] && curl https://unicode.org/Public/emoji/14.0/emoji-test.txt -o "$XDG_CACHE_HOME/emoji.txt"
+
+
+awk -F';' '!/^#/ && /fully-qualified/ {print gensub(/^(.*)#\s(.*)\sE\S+\s(.*)$/, "\\2 \\3", "g", $2);}' "$XDG_CACHE_HOME/emoji.txt" |
+	rofi -i -dmenu |
+	awk -F' ' '{printf $1}' |
+	xclip -sel c
