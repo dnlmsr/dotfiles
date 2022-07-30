@@ -21,9 +21,9 @@ export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 
 # Add texlive to PATHs
-export PATH=/mnt/hdd/texlive/2021/bin/x86_64-linux:$PATH
-export MANPATH=/mnt/hdd/texlive/2021/texmf-dist/doc/man:$MANPATH
-export INFOPATH=/mnt/hdd/texlive/2021/texmf-dist/doc/info:$INFOPATH
+export PATH=/mnt/hdd/texlive/bin/x86_64-linux:$PATH
+export MANPATH=/mnt/hdd/texlive/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/mnt/hdd/texlive/texmf-dist/doc/info:$INFOPATH
 
 # Set Taskwarrior paths
 export TASKRC="$XDG_CONFIG_HOME/task/taskrc"
