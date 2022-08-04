@@ -47,6 +47,7 @@ export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
 # Set java path
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
-# Set cargo path
+# Set cargo and rustup paths
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export PATH="$CARGO_HOME/bin:$PATH"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+source "$CARGO_HOME/env"
