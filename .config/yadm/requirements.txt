@@ -10,6 +10,7 @@ firefox
 git
 kitty
 ledger
+lf
 maim
 mpv
 neovim
@@ -21,6 +22,7 @@ ranger
 rofi
 rofi-calc
 sxiv
+trash-cli
 udiskie
 udisks2
 xclip
