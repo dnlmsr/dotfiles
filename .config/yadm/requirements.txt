@@ -18,7 +18,6 @@ noto-fonts-emoji
 pasystray
 pavucontrol
 qalculate
-ranger
 rofi
 rofi-calc
 sxiv
