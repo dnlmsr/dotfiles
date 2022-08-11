@@ -16,6 +16,7 @@
 
 ;; Packages
 (straight-use-package 'evil)
+(straight-use-package 'helm)
 
 ;; Don't show the splash screen
 (setq inhibit-startup-message t)
@@ -34,3 +35,6 @@
 ;; Load evil mode
 (require 'evil)
 (evil-mode 1)
+
+;; Load helm mode
+(helm-mode 1)
