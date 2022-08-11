@@ -69,6 +69,7 @@ This function should only modify configuration layer settings."
      gtags
      html
      latex
+     (lsp :variables lsp-rust-server 'rust-analyzer)
      lua
      python
      rust
