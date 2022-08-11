@@ -46,3 +46,6 @@
 (helm-mode 1)
 
 (require 'evil-magit)
+
+;; Put newline always at the end of file
+(setq require-final-newline 'visit-save)
