@@ -22,6 +22,7 @@
 (straight-use-package 'magit)
 (straight-use-package 'evil-magit)
 (straight-use-package 'rustic)
+(setq rustic-format-trigger 'on-save)
 (straight-use-package 'tramp)
 (setenv "SHELL" "/bin/bash")
 (require 'tramp)
