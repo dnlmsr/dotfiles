@@ -55,6 +55,8 @@
 
 ;; Load theme
 (load-theme 'jbeans t)
+(add-to-list 'default-frame-alist
+	     '(font . "Source Code Pro-10"))
 
 ;; Load evil mode
 (require 'evil)
