@@ -21,6 +21,7 @@
 (straight-use-package 'helm)
 (straight-use-package 'magit)
 (straight-use-package 'evil-magit)
+(straight-use-package 'rustic)
 
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
