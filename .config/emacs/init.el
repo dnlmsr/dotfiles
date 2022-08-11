@@ -20,8 +20,12 @@
 (straight-use-package 'magit)
 (straight-use-package 'evil-magit)
 
-;; Don't show the splash screen
+;; Startup screen
+(setq-default inhibit-startup-screen t)
+(setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
+(setq initial-scratch-message "")
+(setq initial-major-mode 'fundamental-mode)
 
 ;; Turn off UI elements
 ; (menu-bar-mode -1)
