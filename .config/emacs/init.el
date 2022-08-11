@@ -15,6 +15,8 @@
   (load bootstrap-file nil 'nomessage))
 
 ;; Packages
+(straight-use-package 'exec-path-from-shell)
+(exec-path-from-shell-initialize)
 (straight-use-package 'evil)
 (straight-use-package 'helm)
 (straight-use-package 'magit)
