@@ -22,6 +22,19 @@
 (straight-use-package 'magit)
 (straight-use-package 'evil-magit)
 (straight-use-package 'rustic)
+(straight-use-package 'tramp)
+(setenv "SHELL" "/bin/bash")
+(require 'tramp)
+(add-to-list 'tramp-methods
+	     '("yadm"
+	       (tramp-login-program "yadm")
+	       (tramp-login-args (("enter")))
+	       (tramp-login-env (("SHELL") ("/bin/sh")))
+	       (tramp-remote-shell "/bin/sh")
+	       (tramp-remote-shell-args ("-c"))))
+(defun yadm ()
+  (interactive)
+  (magit-status "/yadm::"))
 
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
