@@ -17,6 +17,8 @@
 ;; Packages
 (straight-use-package 'evil)
 (straight-use-package 'helm)
+(straight-use-package 'magit)
+(straight-use-package 'evil-magit)
 
 ;; Don't show the splash screen
 (setq inhibit-startup-message t)
@@ -38,3 +40,5 @@
 
 ;; Load helm mode
 (helm-mode 1)
+
+(require 'evil-magit)
