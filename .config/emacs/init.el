@@ -1,3 +1,20 @@
+;; Package configuration
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(package-initialize)
+
+(setq package-list
+  '(
+    evil
+    ))
+
+(unless package-archive-contents
+  (package-refresh-contents))
+
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
 ;; Don't show the splash screen
 (setq inhibit-startup-message t)
 
