@@ -35,6 +35,7 @@
 (defun yadm ()
   (interactive)
   (magit-status "/yadm::"))
+(straight-use-package 'jbeans-theme)
 
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
@@ -52,7 +53,7 @@
 (global-display-line-numbers-mode 1)
 
 ;; Load theme
-(load-theme 'wheatgrass t)
+(load-theme 'jbeans t)
 
 ;; Load evil mode
 (require 'evil)
