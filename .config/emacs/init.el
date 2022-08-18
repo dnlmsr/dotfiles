@@ -38,10 +38,8 @@
   (magit-status "/yadm::"))
 (straight-use-package 'jbeans-theme)
 (straight-use-package 'ledger-mode)
-(straight-use-package 'auto-complete)
-(global-auto-complete-mode t)
-(add-to-list 'ac-modes 'ledger-mode)
-(add-to-list 'ac-modes 'rustic-mode)
+(straight-use-package 'company-mode)
+(add-hook 'after-init-hook 'global-company-mode)
 (straight-use-package 'lsp-mode)
 (straight-use-package 'lsp-ui)
 
