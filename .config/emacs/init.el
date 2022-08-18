@@ -42,6 +42,7 @@
 (global-auto-complete-mode t)
 (add-to-list 'ac-modes 'ledger-mode)
 (add-to-list 'ac-modes 'rustic-mode)
+(straight-use-package 'lsp-mode)
 
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
