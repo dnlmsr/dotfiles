@@ -38,6 +38,7 @@
   (magit-status "/yadm::"))
 (straight-use-package 'jbeans-theme)
 (straight-use-package 'ledger-mode)
+(straight-use-package 'auto-complete)
 
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
