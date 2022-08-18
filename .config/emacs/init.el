@@ -42,6 +42,8 @@
 (add-hook 'after-init-hook 'global-company-mode)
 (straight-use-package 'lsp-mode)
 (straight-use-package 'lsp-ui)
+(straight-use-package 'which-key)
+(which-key-mode)
 
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
