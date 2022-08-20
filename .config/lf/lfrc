@@ -1,6 +1,6 @@
 set icons
 set colors
 
-cmd trash %trash $f
+cmd trash %trash "$f"
 
 map D trash
