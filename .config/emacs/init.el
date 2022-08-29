@@ -38,6 +38,14 @@
   (magit-status "/yadm::"))
 (straight-use-package 'jbeans-theme)
 (straight-use-package 'ledger-mode)
+(setq ledger-reports
+      '(
+	("bal" "%(binary) -f %(ledger-file) bal")
+	("reg" "%(binary) -f %(ledger-file) reg")
+	("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
+	("account" "%(binary) -f %(ledger-file) reg %(account)")
+	("net" "%(binary) -f %(ledger-file) cleared ^Assets ^Liabilities")
+	))
 (straight-use-package 'company-mode)
 (add-hook 'after-init-hook 'global-company-mode)
 (straight-use-package 'lsp-mode)
