@@ -52,6 +52,7 @@
 (straight-use-package 'lsp-ui)
 (straight-use-package 'which-key)
 (which-key-mode)
+(straight-use-package 'auctex)
 
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
