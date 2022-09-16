@@ -53,6 +53,9 @@
 (straight-use-package 'which-key)
 (which-key-mode)
 (straight-use-package 'auctex)
+(straight-use-package 'yasnippet)
+(yas-global-mode 1)
+(straight-use-package 'yasnippet-snippets)
 
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
