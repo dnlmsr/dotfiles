@@ -56,6 +56,7 @@
 (straight-use-package 'yasnippet)
 (yas-global-mode 1)
 (straight-use-package 'yasnippet-snippets)
+(straight-use-package 'php-mode)
 
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
