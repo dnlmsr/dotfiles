@@ -51,3 +51,9 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 source "$CARGO_HOME/env"
+
+# Set isync directory
+export MBSYNCRC="$XDG_CONFIG_HOME"/isync/mbsyncrc
+
+# Set mysql history file
+export MYSQL_HISTFILE="$XDG_DATA_HOME"/mysql_history
