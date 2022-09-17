@@ -15,17 +15,34 @@
   (load bootstrap-file nil 'nomessage))
 
 ;; Packages
+
+;; exec-path-from-shell
 (straight-use-package 'exec-path-from-shell)
 (exec-path-from-shell-initialize)
+
+;; Evil mode
 (straight-use-package 'evil)
+(require 'evil)
+(evil-mode 1)
+
+;; Helm
 (straight-use-package 'helm)
+(helm-mode 1)
+
+;; Magit
 (straight-use-package 'magit)
 (straight-use-package 'evil-magit)
+(require 'evil-magit)
+
+;; Rust setup
 (straight-use-package 'rustic)
 (setq rustic-format-trigger 'on-save)
+
+;; Tramp
 (straight-use-package 'tramp)
 (setenv "SHELL" "/bin/bash")
 (require 'tramp)
+;; Setup yadm command
 (add-to-list 'tramp-methods
 	     '("yadm"
 	       (tramp-login-program "yadm")
@@ -36,7 +53,8 @@
 (defun yadm ()
   (interactive)
   (magit-status "/yadm::"))
-(straight-use-package 'jbeans-theme)
+
+;; Ledger mode
 (straight-use-package 'ledger-mode)
 (setq ledger-reports
       '(
@@ -46,16 +64,28 @@
 	("account" "%(binary) -f %(ledger-file) reg %(account)")
 	("net" "%(binary) -f %(ledger-file) cleared ^Assets ^Liabilities")
 	))
+
+;; Company mode
 (straight-use-package 'company-mode)
 (add-hook 'after-init-hook 'global-company-mode)
+
+;; LSP mode
 (straight-use-package 'lsp-mode)
 (straight-use-package 'lsp-ui)
+
+;; Which key
 (straight-use-package 'which-key)
 (which-key-mode)
+
+;; Auctex
 (straight-use-package 'auctex)
+
+;; Yasnippet
 (straight-use-package 'yasnippet)
 (yas-global-mode 1)
 (straight-use-package 'yasnippet-snippets)
+
+;; PHP mode
 (straight-use-package 'php-mode)
 
 ;; Startup screen
@@ -74,18 +104,10 @@
 (global-display-line-numbers-mode 1)
 
 ;; Load theme
+(straight-use-package 'jbeans-theme)
 (load-theme 'jbeans t)
 (add-to-list 'default-frame-alist
 	     '(font . "Source Code Pro-10"))
-
-;; Load evil mode
-(require 'evil)
-(evil-mode 1)
-
-;; Load helm mode
-(helm-mode 1)
-
-(require 'evil-magit)
 
 ;; Put newline always at the end of file
 (setq require-final-newline 'visit-save)
