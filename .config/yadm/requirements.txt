@@ -8,6 +8,7 @@ emacs
 fail2ban
 firefox
 git
+gitflow-avh
 kitty
 ledger
 lf
@@ -21,10 +22,12 @@ qalculate
 rofi
 rofi-calc
 sxiv
+tmpmail
 trash-cli
 udiskie
 udisks2
 xclip
+xdg-ninja
 xorg-xinit
 xorg-xserver
 yadm
