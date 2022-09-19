@@ -15,4 +15,4 @@ cat ~/.config/yadm/requirements.txt | xargs paru -Syyu
 # Install oh-my-zsh
 chsh -s /usr/bin/zsh
 mkdir -p ~/.local/share/oh-my-zsh
-git clone git@github.com:ohmyzsh/ohmyzsh.git ~/.local/share/oh-my-zsh
+git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.local/share/oh-my-zsh
