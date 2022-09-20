@@ -11,6 +11,7 @@ firefox
 fzf
 git
 gitflow-avh
+gnupg
 kitty
 ledger
 lf
@@ -20,6 +21,7 @@ mpv
 neovim
 nerd-fonts-source-code-pro
 noto-fonts-emoji
+openssh
 pasystray
 pavucontrol
 python-pywal
