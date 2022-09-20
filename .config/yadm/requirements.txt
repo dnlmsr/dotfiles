@@ -15,12 +15,14 @@ kitty
 ledger
 lf
 maim
+man-db
 mpv
 neovim
 nerd-fonts-source-code-pro
 noto-fonts-emoji
 pasystray
 pavucontrol
+python-pywal
 qalculate-gtk
 rofi
 rofi-calc
