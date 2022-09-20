@@ -1,0 +1,12 @@
+{
+    "archinstall-language": "Italian",
+    "audio": "pipewire",
+    "bootloader": "grub-install",
+    "keyboard-layout": "it",
+    "nic": {
+        "type": "nm"
+    },
+    "packages": ["yadm", "openssh"],
+    "sys-language": "it_IT.UTF-8",
+    "timezone": "Europe/Rome"
+}
