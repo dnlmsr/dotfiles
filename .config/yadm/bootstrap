@@ -7,12 +7,12 @@ makepkg -si
 cd ~
 rm -rf ~/paru
 
+# Install dependencies
+paru -Syyu --needed - < ~/.config/yadm/requirements.txt
+
 # Enable user daemons
 systemctl --user enable --now emacs.service
 systemctl --user enable --now trash-empty.timer
-
-# Install dependencies
-cat ~/.config/yadm/requirements.txt | xargs paru -Syyu
 
 # Install oh-my-zsh
 chsh -s /usr/bin/zsh
