@@ -1,0 +1,19 @@
+#!/bin/sh
+# Install paru AUR helper
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git ~/paru
+cd ~/paru
+makepkg -si && cd ~ && rm -rf ~/paru
+
+# Install dependencies
+paru -Syyu --needed - < ~/.config/yadm/requirements.txt
+
+# Enable user daemons
+systemctl --user enable --now emacs.service
+systemctl --user enable --now trash-empty.timer
+
+# Install oh-my-zsh
+chsh -s /usr/bin/zsh
+mkdir -p ~/.cache/zsh
+mkdir -p ~/.local/share/oh-my-zsh
+git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.local/share/oh-my-zsh
