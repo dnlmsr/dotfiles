@@ -1,3 +1,4 @@
+adobe-source-code-pro-fonts
 arandr
 autorandr
 awesome
@@ -7,6 +8,7 @@ dunst
 emacs
 fail2ban
 firefox
+fzf
 git
 gitflow-avh
 kitty
@@ -15,10 +17,11 @@ lf
 maim
 mpv
 neovim
+nerd-fonts-source-code-pro
 noto-fonts-emoji
 pasystray
 pavucontrol
-qalculate
+qalculate-gtk
 rofi
 rofi-calc
 sxiv
@@ -28,8 +31,8 @@ udiskie
 udisks2
 xclip
 xdg-ninja
+xorg-server
 xorg-xinit
-xorg-xserver
 yadm
 zathura
 zsh
