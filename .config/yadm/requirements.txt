@@ -40,4 +40,5 @@ xorg-server
 xorg-xinit
 yadm
 zathura
+zathura-pdf-mupdf
 zsh
