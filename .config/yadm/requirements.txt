@@ -20,7 +20,7 @@ maim
 man-db
 mpv
 neovim
-nerd-fonts-source-code-pro
+nerd-fonts-complete
 noto-fonts-emoji
 openssh
 pasystray
