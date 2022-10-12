@@ -88,6 +88,11 @@
 ;; PHP mode
 (straight-use-package 'php-mode)
 
+;; Projectile
+(straight-use-package 'projectile)
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
 (setq inhibit-splash-screen t)
