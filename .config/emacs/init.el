@@ -22,6 +22,7 @@
 
 ;; Evil mode
 (straight-use-package 'evil)
+(setq evil-want-C-u-scroll t)
 (require 'evil)
 (evil-mode 1)
 
