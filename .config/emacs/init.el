@@ -32,7 +32,10 @@
 ;; Magit
 (straight-use-package 'magit)
 (straight-use-package 'evil-magit)
+(straight-use-package 'magit-gitflow)
 (require 'evil-magit)
+(require 'magit-gitflow)
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 
 ;; Rust setup
 (straight-use-package 'rustic)
