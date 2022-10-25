@@ -69,6 +69,8 @@
 (straight-use-package 'company-mode)
 (add-hook 'after-init-hook 'global-company-mode)
 
+(straight-use-package '(company-box :hook (company-mode . company-box-mode)))
+
 ;; LSP mode
 (straight-use-package 'lsp-mode)
 (straight-use-package 'lsp-ui)
