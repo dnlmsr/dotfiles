@@ -26,6 +26,12 @@
 (require 'evil)
 (evil-mode 1)
 
+;; Undo tree
+(straight-use-package 'undo-tree)
+(require 'undo-tree)
+(global-undo-tree-mode 1)
+(evil-set-undo-system 'undo-tree)
+
 ;; Helm
 (straight-use-package 'helm)
 (helm-mode 1)
@@ -33,14 +39,17 @@
 ;; Magit
 (straight-use-package 'magit)
 (straight-use-package 'evil-magit)
-(straight-use-package 'magit-gitflow)
 (require 'evil-magit)
-(require 'magit-gitflow)
-(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 
 ;; Rust setup
 (straight-use-package 'rustic)
 (setq rustic-format-trigger 'on-save)
+
+;; Kconfig mode
+(straight-use-package 'kconfig-mode)
+
+;; JSON mode
+(straight-use-package 'json-mode)
 
 ;; Tramp
 (straight-use-package 'tramp)
@@ -78,6 +87,9 @@
 ;; LSP mode
 (straight-use-package 'lsp-mode)
 (straight-use-package 'lsp-ui)
+(require 'lsp-mode)
+(add-hook 'c-mode-hook #'lsp)
+(evil-define-key 'normal lsp-mode-map (kbd "\\") lsp-command-map)
 
 ;; Which key
 (straight-use-package 'which-key)
