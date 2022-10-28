@@ -21,9 +21,9 @@ export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 
 # Add texlive to PATHs
-export PATH=/mnt/hdd/texlive/2021/bin/x86_64-linux:$PATH
-export MANPATH=/mnt/hdd/texlive/2021/texmf-dist/doc/man:$MANPATH
-export INFOPATH=/mnt/hdd/texlive/2021/texmf-dist/doc/info:$INFOPATH
+export PATH=/mnt/hdd/texlive/bin/x86_64-linux:$PATH
+export MANPATH=/mnt/hdd/texlive/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/mnt/hdd/texlive/texmf-dist/doc/info:$INFOPATH
 
 # Set Taskwarrior paths
 export TASKRC="$XDG_CONFIG_HOME/task/taskrc"
@@ -47,6 +47,13 @@ export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
 # Set java path
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
-# Set cargo path
+# Set cargo and rustup paths
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export PATH="$CARGO_HOME/bin:$PATH"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+[ -f "$CARGO_HOME/env" ] && source "$CARGO_HOME/env"
+
+# Set isync directory
+export MBSYNCRC="$XDG_CONFIG_HOME"/isync/mbsyncrc
+
+# Set mysql history file
+export MYSQL_HISTFILE="$XDG_DATA_HOME"/mysql_history

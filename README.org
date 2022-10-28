@@ -6,3 +6,21 @@ This is a collection of my dotfiles. Use [[https://yadm.io][yadm]] if you want t
 
 * Requirements
 For requirements see ~requirements.txt~.
+
+* Installation
+In order to ease installation I created a simple archinstall config.
+To use it run:
+#+begin_src
+  curl https://raw.githubusercontent.com/dnlmsr/dotfiles/feature/archinstall/.config/archinstall/user_configuration.json -o ./user_configuration.json
+  archinstall --config ./user_configuration.json
+#+end_src
+After arch is installed, you can reboot and download the dotfiles, the bootstrap will take care of downloading paru and install all dependencies:
+#+begin_src
+  # HTTPS connection
+  yadm clone https://github.com/dnlmsr/dotfiles.git
+
+  # SSH connection
+  yadm clonegit@github.com:dnlmsr/dotfiles.git
+
+  yadm bootstrap
+#+end_src

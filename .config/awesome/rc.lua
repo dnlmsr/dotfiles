@@ -209,6 +209,7 @@ awful.screen.connect_for_each_screen(function(s)
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
+	    require("battery-widget") {},
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             wibox.widget.systray(),
@@ -579,4 +580,3 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.once("udiskie -Nt")
 awful.spawn.once("pasystray")
 awful.spawn.once("autorandr -c")
-awful.spawn.once("workrave")

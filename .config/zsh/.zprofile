@@ -12,5 +12,5 @@
 
 # Start X.org at login
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-    exec startx
+    exec startx -- -ardelay 200 -arinterval 30
 fi
