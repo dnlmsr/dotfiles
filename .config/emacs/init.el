@@ -98,6 +98,9 @@
 ;; Auctex
 (straight-use-package 'auctex)
 
+;; YAML mode
+(straight-use-package 'yaml-mode)
+
 ;; Yasnippet
 (straight-use-package 'yasnippet)
 (yas-global-mode 1)
