@@ -41,10 +41,6 @@
 (straight-use-package 'evil-magit)
 (require 'evil-magit)
 
-;; Rust setup
-(straight-use-package 'rustic)
-(setq rustic-format-trigger 'on-save)
-
 ;; Kconfig mode
 (straight-use-package 'kconfig-mode)
 
@@ -67,17 +63,6 @@
   (interactive)
   (magit-status "/yadm::"))
 
-;; Ledger mode
-(straight-use-package 'ledger-mode)
-(setq ledger-reports
-      '(
-	("bal" "%(binary) -f %(ledger-file) bal")
-	("reg" "%(binary) -f %(ledger-file) reg")
-	("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
-	("account" "%(binary) -f %(ledger-file) reg %(account)")
-	("net" "%(binary) -f %(ledger-file) cleared ^Assets ^Liabilities")
-	))
-
 ;; Company mode
 (straight-use-package 'company-mode)
 (add-hook 'after-init-hook 'global-company-mode)
@@ -95,9 +80,6 @@
 (straight-use-package 'which-key)
 (which-key-mode)
 
-;; Auctex
-(straight-use-package 'auctex)
-
 ;; YAML mode
 (straight-use-package 'yaml-mode)
 
@@ -105,9 +87,6 @@
 (straight-use-package 'yasnippet)
 (yas-global-mode 1)
 (straight-use-package 'yasnippet-snippets)
-
-;; PHP mode
-(straight-use-package 'php-mode)
 
 ;; Projectile
 (straight-use-package 'projectile)
