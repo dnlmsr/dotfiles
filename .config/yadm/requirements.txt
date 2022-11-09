@@ -4,17 +4,14 @@ arandr
 autorandr
 awesome
 bottom
-cups
 dunst
 emacs
-fail2ban
 firefox
 fzf
 git
 gitflow-avh
 gnupg
 kitty
-ledger
 lf
 maim
 man-db
