@@ -121,3 +121,6 @@
 
 ;; Put newline always at the end of file
 (setq require-final-newline 'visit-save)
+
+;; Electric pair mode
+(electric-pair-mode 1)
