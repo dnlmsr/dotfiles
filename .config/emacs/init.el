@@ -26,6 +26,12 @@
 (require 'evil)
 (evil-mode 1)
 
+;; Undo tree
+(straight-use-package 'undo-tree)
+(require 'undo-tree)
+(global-undo-tree-mode 1)
+(evil-set-undo-system 'undo-tree)
+
 ;; Helm
 (straight-use-package 'helm)
 (helm-mode 1)
@@ -122,3 +128,6 @@
 
 ;; Put newline always at the end of file
 (setq require-final-newline 'visit-save)
+
+;; Electric pair mode
+(electric-pair-mode 1)
