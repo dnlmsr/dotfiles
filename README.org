@@ -17,10 +17,10 @@ To use it run:
 After arch is installed, you can reboot and download the dotfiles, the bootstrap will take care of downloading paru and install all dependencies:
 #+begin_src
   # HTTPS connection
-  yadm clone https://github.com/dnlmsr/dotfiles.git
+  yadm clone -b work https://github.com/dnlmsr/dotfiles.git
 
   # SSH connection
-  yadm clonegit@github.com:dnlmsr/dotfiles.git
+  yadm clone -b work git@github.com:dnlmsr/dotfiles.git
 
   yadm bootstrap
 #+end_src
