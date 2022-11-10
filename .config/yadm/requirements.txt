@@ -4,6 +4,7 @@ arandr
 autorandr
 awesome
 bottom
+clang
 dunst
 emacs
 firefox
