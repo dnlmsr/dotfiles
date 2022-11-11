@@ -22,7 +22,7 @@ theme.bg_minimize   = xtheme["color8"]
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = xtheme["foreground"]
-theme.fg_focus      = xtheme["color7"]
+theme.fg_focus      = xtheme["background"]
 theme.fg_urgent     = xtheme["color0"]
 theme.fg_minimize   = xtheme["color7"]
 
