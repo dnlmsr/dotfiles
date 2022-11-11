@@ -79,6 +79,7 @@
 (straight-use-package 'lsp-ui)
 (require 'lsp-mode)
 (add-hook 'c-mode-hook #'lsp)
+(add-hook 'python-mode-hook #'lsp)
 (evil-define-key 'normal lsp-mode-map (kbd "\\") lsp-command-map)
 
 ;; Which key
