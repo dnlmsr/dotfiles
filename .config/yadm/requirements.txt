@@ -5,6 +5,7 @@ autorandr
 awesome
 bottom
 clang
+cmake
 dunst
 emacs
 firefox
@@ -24,6 +25,7 @@ openssh
 pasystray
 pavucontrol
 pyright
+python-pip
 python-pywal
 qalculate-gtk
 rofi
