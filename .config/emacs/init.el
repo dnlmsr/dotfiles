@@ -121,8 +121,8 @@
 (global-display-line-numbers-mode 1)
 
 ;; Load theme
-(straight-use-package 'jbeans-theme)
-(load-theme 'jbeans t)
+(straight-use-package 'kaolin-themes)
+(load-theme 'kaolin-aurora t)
 (add-to-list 'default-frame-alist
 	     '(font . "Source Code Pro-10"))
 
