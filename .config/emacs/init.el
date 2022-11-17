@@ -52,6 +52,7 @@
 (elpy-enable)
 (straight-use-package 'lsp-pyright)
 (require 'lsp-pyright)
+(setq elpy-formatter 'black)
 
 ;; Tramp
 (straight-use-package 'tramp)
