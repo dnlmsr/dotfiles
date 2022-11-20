@@ -47,11 +47,6 @@
 ;; JSON mode
 (straight-use-package 'json-mode)
 
-;; Python mode
-(straight-use-package 'python-mode)
-(straight-use-package 'lsp-pyright)
-(require 'lsp-pyright)
-
 ;; Tramp
 (straight-use-package 'tramp)
 (setenv "SHELL" "/bin/bash")
@@ -83,6 +78,11 @@
 (add-hook 'c-mode-hook #'lsp)
 (add-hook 'python-mode-hook #'lsp)
 (evil-define-key 'normal lsp-mode-map (kbd "\\") lsp-command-map)
+
+;; Python mode
+(straight-use-package 'python-mode)
+(straight-use-package 'lsp-pyright)
+(require 'lsp-pyright)
 
 ;; Which key
 (straight-use-package 'which-key)
