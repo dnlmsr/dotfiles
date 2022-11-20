@@ -75,6 +75,8 @@
 (straight-use-package '(company-box :hook (company-mode . company-box-mode)))
 
 ;; LSP mode
+(straight-use-package 'flycheck)
+(require 'flycheck)
 (straight-use-package 'lsp-mode)
 (straight-use-package 'lsp-ui)
 (require 'lsp-mode)
