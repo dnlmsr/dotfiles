@@ -48,11 +48,9 @@
 (straight-use-package 'json-mode)
 
 ;; Python mode
-(straight-use-package 'elpy)
-(elpy-enable)
+(straight-use-package 'python-mode)
 (straight-use-package 'lsp-pyright)
 (require 'lsp-pyright)
-(setq elpy-formatter 'black)
 
 ;; Tramp
 (straight-use-package 'tramp)
