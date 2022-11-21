@@ -34,10 +34,9 @@
   )
 
 ;; Undo tree
-(straight-use-package 'undo-tree)
-(require 'undo-tree)
-(global-undo-tree-mode 1)
-(evil-set-undo-system 'undo-tree)
+(use-package undo-tree
+  :config (global-undo-tree-mode 1)
+  )
 
 ;; Helm
 (straight-use-package 'helm)
