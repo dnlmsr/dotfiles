@@ -28,10 +28,10 @@
   )
 
 ;; Evil mode
-(straight-use-package 'evil)
-(setq evil-want-C-u-scroll t)
-(require 'evil)
-(evil-mode 1)
+(use-package evil
+  :custom (evil-want-C-u-scroll t)
+  :config (evil-mode 1) (evil-set-undo-system 'undo-tree)
+  )
 
 ;; Undo tree
 (straight-use-package 'undo-tree)
