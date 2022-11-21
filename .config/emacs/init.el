@@ -23,8 +23,9 @@
 ;; Packages
 
 ;; exec-path-from-shell
-(straight-use-package 'exec-path-from-shell)
-(exec-path-from-shell-initialize)
+(use-package exec-path-from-shell
+  :config (exec-path-from-shell-initialize)
+  )
 
 ;; Evil mode
 (straight-use-package 'evil)
