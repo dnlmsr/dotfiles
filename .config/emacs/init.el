@@ -39,8 +39,9 @@
   )
 
 ;; Helm
-(straight-use-package 'helm)
-(helm-mode 1)
+(use-package helm
+  :config (helm-mode 1)
+  )
 
 ;; Magit
 (straight-use-package 'magit)
