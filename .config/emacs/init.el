@@ -14,6 +14,12 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
+;; Setup use-package
+(straight-use-package 'use-package)
+(use-package straight
+  :custom (straight-use-package-by-default t)
+  )
+
 ;; Packages
 
 ;; exec-path-from-shell
