@@ -82,8 +82,12 @@
 (straight-use-package '(company-box :hook (company-mode . company-box-mode)))
 
 ;; LSP mode
+(straight-use-package 'flycheck)
+(require 'flycheck)
 (straight-use-package 'lsp-mode)
 (straight-use-package 'lsp-ui)
+(require 'lsp-mode)
+(evil-define-key 'normal lsp-mode-map (kbd "\\") lsp-command-map)
 
 ;; Which key
 (straight-use-package 'which-key)
@@ -96,9 +100,6 @@
 (straight-use-package 'yasnippet)
 (yas-global-mode 1)
 (straight-use-package 'yasnippet-snippets)
-
-;; PHP mode
-(straight-use-package 'php-mode)
 
 ;; Projectile
 (straight-use-package 'projectile)
