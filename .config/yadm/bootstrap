@@ -1,12 +1,12 @@
 #!/bin/sh
 # Install paru AUR helper
-sudo pacman -S --needed base-devel
+sudo pacman -S --needed base-devel rust --noconfirm
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru
-makepkg -si && cd ~ && rm -rf ~/paru
+makepkg -si --noconfirm && cd ~ && rm -rf ~/paru
 
 # Install dependencies
-paru -Syyu --needed - < ~/.config/yadm/requirements.txt
+paru -Syyu --needed --noconfirm - < ~/.config/yadm/requirements.txt
 
 # Enable user daemons
 systemctl --user enable --now emacs.service
