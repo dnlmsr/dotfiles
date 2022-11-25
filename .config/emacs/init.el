@@ -102,7 +102,9 @@
   )
 
 ;; Auctex
-(use-package auctex)
+(use-package auctex
+  :defer t
+  )
 
 ;; Yasnippet
 (use-package yasnippet
