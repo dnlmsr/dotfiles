@@ -91,11 +91,9 @@
   )
 
 ;; LSP mode
-(straight-use-package 'flycheck)
-(require 'flycheck)
-(straight-use-package 'lsp-mode)
-(straight-use-package 'lsp-ui)
-(require 'lsp-mode)
+(use-package flycheck)
+(use-package lsp-mode)
+(use-package lsp-ui)
 (evil-define-key 'normal lsp-mode-map (kbd "\\") lsp-command-map)
 
 ;; Which key
