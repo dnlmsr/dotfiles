@@ -30,7 +30,12 @@
 ;; Evil mode
 (use-package evil
   :custom (evil-want-C-u-scroll t)
+  :init (setq evil-want-keybinding nil)
   :config (evil-mode 1) (evil-set-undo-system 'undo-tree)
+  )
+(use-package evil-collection
+  :after evil
+  :config (evil-collection-init)
   )
 
 ;; Undo tree
@@ -46,7 +51,6 @@
 ;; Magit
 (use-package magit
   :hook turn-on-magit-gitflow)
-(use-package evil-magit)
 (use-package magit-gitflow)
 
 ;; Rust setup
