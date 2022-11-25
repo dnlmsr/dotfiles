@@ -50,8 +50,9 @@
 (use-package magit-gitflow)
 
 ;; Rust setup
-(straight-use-package 'rustic)
-(setq rustic-format-trigger 'on-save)
+(use-package rustic
+  :custom (rustic-format-trigger 'on-save)
+  )
 
 ;; Tramp
 (straight-use-package 'tramp)
