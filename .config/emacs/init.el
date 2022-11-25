@@ -76,15 +76,11 @@
   )
 
 ;; Ledger mode
-(straight-use-package 'ledger-mode)
-(setq ledger-reports
-      '(
-	("bal" "%(binary) -f %(ledger-file) bal")
-	("reg" "%(binary) -f %(ledger-file) reg")
-	("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
-	("account" "%(binary) -f %(ledger-file) reg %(account)")
-	("net" "%(binary) -f %(ledger-file) cleared ^Assets ^Liabilities")
-	))
+(use-package ledger-mode
+  :config (add-to-list 'ledger-reports
+		       '("net" "%(binary) -f %(ledger-file) cleared ^Assets ^Liabilities")
+		       )
+  )
 
 ;; Company mode
 (straight-use-package 'company-mode)
