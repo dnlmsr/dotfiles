@@ -83,8 +83,8 @@
   )
 
 ;; Company mode
-(use-package company-mode
-  :hook (after-init-hook . global-company-mode)
+(use-package company
+  :init (global-company-mode)
   )
 (use-package company-box
   :hook (company-mode . company-box-mode)
