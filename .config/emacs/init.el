@@ -81,8 +81,7 @@
 
 ;; Python mode
 (straight-use-package 'python-mode)
-(straight-use-package 'lsp-pyright)
-(require 'lsp-pyright)
+(setq lsp-pylsp-plugins-pylint-enabled t)
 
 ;; Which key
 (straight-use-package 'which-key)

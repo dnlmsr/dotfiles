@@ -24,7 +24,6 @@ noto-fonts-emoji
 openssh
 pasystray
 pavucontrol
-pyright
 python-pip
 python-pywal
 qalculate-gtk
