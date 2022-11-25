@@ -97,20 +97,23 @@
 (evil-define-key 'normal lsp-mode-map (kbd "\\") lsp-command-map)
 
 ;; Which key
-(straight-use-package 'which-key)
-(which-key-mode)
+(use-package which-key
+  :config (which-key-mode)
+  )
 
 ;; Auctex
-(straight-use-package 'auctex)
+(use-package auctex)
 
 ;; Yasnippet
-(straight-use-package 'yasnippet)
-(yas-global-mode 1)
-(straight-use-package 'yasnippet-snippets)
+(use-package yasnippet
+  :config (yas-global-mode 1)
+  )
+(use-package yasnippet-snippets)
 
 ;; Projectile
-(straight-use-package 'projectile)
-(projectile-mode +1)
+(use-package projectile
+  :config (projectile-mode +1)
+  )
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; Startup screen
@@ -129,7 +132,7 @@
 (global-display-line-numbers-mode 1)
 
 ;; Load theme
-(straight-use-package 'kaolin-themes)
+(use-package kaolin-themes)
 (load-theme 'kaolin-aurora t)
 (add-to-list 'default-frame-alist
 	     '(font . "Source Code Pro-10"))
