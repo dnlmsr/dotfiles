@@ -55,20 +55,25 @@
   )
 
 ;; Tramp
-(straight-use-package 'tramp)
 (setenv "SHELL" "/bin/bash")
-(require 'tramp)
+(use-package tramp
+  ;; Setup yadm method
+  :config (add-to-list 'tramp-methods
+		       '("yadm"
+			 (tramp-login-program "yadm")
+			 (tramp-login-args (("enter")))
+			 (tramp-login-env (("SHELL") ("/bin/sh")))
+			 (tramp-remote-shell "/bin/sh")
+			 (tramp-remote-shell-args ("-c"))
+			 )
+		       )
+  )
+
 ;; Setup yadm command
-(add-to-list 'tramp-methods
-	     '("yadm"
-	       (tramp-login-program "yadm")
-	       (tramp-login-args (("enter")))
-	       (tramp-login-env (("SHELL") ("/bin/sh")))
-	       (tramp-remote-shell "/bin/sh")
-	       (tramp-remote-shell-args ("-c"))))
 (defun yadm ()
   (interactive)
-  (magit-status "/yadm::"))
+  (magit-status "/yadm::")
+  )
 
 ;; Ledger mode
 (straight-use-package 'ledger-mode)
