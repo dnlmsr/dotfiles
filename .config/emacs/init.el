@@ -31,7 +31,7 @@
 (use-package evil
   :custom (evil-want-C-u-scroll t)
   :init (setq evil-want-keybinding nil)
-  :config (evil-mode 1) (evil-set-undo-system 'undo-tree)
+  :config (evil-mode 1) (evil-set-undo-system 'undo-tree) (evil-set-leader 'normal (kbd "SPC"))(evil-define-key 'normal 'global (kbd "<leader>fs") 'save-buffer)(evil-define-key 'normal 'global (kbd "<leader>gs") 'magit-status)
   )
 (use-package evil-collection
   :after evil
