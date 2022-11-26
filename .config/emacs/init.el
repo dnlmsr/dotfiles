@@ -14,90 +14,109 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
+;; Setup use-package
+(straight-use-package 'use-package)
+(use-package straight
+  :custom (straight-use-package-by-default t)
+  )
+
 ;; Packages
 
 ;; exec-path-from-shell
-(straight-use-package 'exec-path-from-shell)
-(exec-path-from-shell-initialize)
+(use-package exec-path-from-shell
+  :config (exec-path-from-shell-initialize)
+  )
 
 ;; Evil mode
-(straight-use-package 'evil)
-(setq evil-want-C-u-scroll t)
-(require 'evil)
-(evil-mode 1)
+(use-package evil
+  :custom (evil-want-C-u-scroll t)
+  :init (setq evil-want-keybinding nil)
+  :config (evil-mode 1) (evil-set-undo-system 'undo-tree)
+  )
+(use-package evil-collection
+  :after evil
+  :config (evil-collection-init)
+  )
 
 ;; Undo tree
-(straight-use-package 'undo-tree)
-(require 'undo-tree)
-(global-undo-tree-mode 1)
-(evil-set-undo-system 'undo-tree)
+(use-package undo-tree
+  :config (global-undo-tree-mode 1)
+  )
 
 ;; Helm
-(straight-use-package 'helm)
-(helm-mode 1)
+(use-package helm
+  :config (helm-mode 1)
+  )
 
 ;; Magit
-(straight-use-package 'magit)
-(straight-use-package 'evil-magit)
-(require 'evil-magit)
+(use-package magit)
 
 ;; Kconfig mode
-(straight-use-package 'kconfig-mode)
+(use-package kconfig-mode)
 
 ;; JSON mode
-(straight-use-package 'json-mode)
+(use-package json-mode)
 
 ;; Tramp
-(straight-use-package 'tramp)
 (setenv "SHELL" "/bin/bash")
-(require 'tramp)
+(use-package tramp
+  ;; Setup yadm method
+  :config (add-to-list 'tramp-methods
+		       '("yadm"
+			 (tramp-login-program "yadm")
+			 (tramp-login-args (("enter")))
+			 (tramp-login-env (("SHELL") ("/bin/sh")))
+			 (tramp-remote-shell "/bin/sh")
+			 (tramp-remote-shell-args ("-c"))
+			 )
+		       )
+  )
+
 ;; Setup yadm command
-(add-to-list 'tramp-methods
-	     '("yadm"
-	       (tramp-login-program "yadm")
-	       (tramp-login-args (("enter")))
-	       (tramp-login-env (("SHELL") ("/bin/sh")))
-	       (tramp-remote-shell "/bin/sh")
-	       (tramp-remote-shell-args ("-c"))))
 (defun yadm ()
   (interactive)
-  (magit-status "/yadm::"))
+  (magit-status "/yadm::")
+  )
+
 
 ;; Company mode
-(straight-use-package 'company-mode)
-(add-hook 'after-init-hook 'global-company-mode)
-
-(straight-use-package '(company-box :hook (company-mode . company-box-mode)))
+(use-package company
+  :init (global-company-mode)
+  )
+(use-package company-box
+  :hook (company-mode . company-box-mode)
+  )
 
 ;; LSP mode
-(straight-use-package 'flycheck)
-(require 'flycheck)
-(straight-use-package 'lsp-mode)
-(straight-use-package 'lsp-ui)
-(require 'lsp-mode)
-(add-hook 'c-mode-hook #'lsp)
-(add-hook 'python-mode-hook #'lsp)
+(use-package flycheck)
+(use-package lsp-mode
+	     :custom (lsp-pylsp-plugins-pylint-enabled t)
+	     :hook (c-mode python-mode)
+	     )
+(use-package lsp-ui)
 (evil-define-key 'normal lsp-mode-map (kbd "\\") lsp-command-map)
 
 ;; Python mode
-(straight-use-package 'python-mode)
-(setq lsp-pylsp-plugins-pylint-enabled t)
+(use-package python-mode)
 
 ;; Which key
-(straight-use-package 'which-key)
-(which-key-mode)
+(use-package which-key
+  :config (which-key-mode)
+  )
 
 ;; YAML mode
-(straight-use-package 'yaml-mode)
+(use-package yaml-mode)
 
 ;; Yasnippet
-(straight-use-package 'yasnippet)
-(yas-global-mode 1)
-(straight-use-package 'yasnippet-snippets)
+(use-package yasnippet
+  :config (yas-global-mode 1)
+  )
+(use-package yasnippet-snippets)
 
 ;; Projectile
-(straight-use-package 'projectile)
-(projectile-mode +1)
+(use-package projectile
+  :config (projectile-mode +1)
+  )
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; Startup screen
@@ -116,7 +135,7 @@
 (global-display-line-numbers-mode 1)
 
 ;; Load theme
-(straight-use-package 'kaolin-themes)
+(use-package kaolin-themes)
 (load-theme 'kaolin-aurora t)
 (add-to-list 'default-frame-alist
 	     '(font . "Source Code Pro-10"))
