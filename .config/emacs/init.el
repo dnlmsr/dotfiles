@@ -35,8 +35,12 @@
   (evil-set-leader 'normal (kbd "SPC"))
   (evil-define-key 'normal 'global
     (kbd "<leader>fs") 'save-buffer
+    (kbd "<leader>ff") 'helm-find-files
+    (kbd "<leader>fr") 'helm-recentf
     (kbd "<leader>gs") 'magit-status
     (kbd "<leader>gy") 'yadm
+    (kbd "<leader>qQ") 'kill-emacs
+    (kbd "<leader>qq") 'save-buffers-kill-terminal
     )
 (evil-define-key 'normal lsp-mode-map (kbd ",") lsp-command-map)
 (evil-define-key 'normal projectile-mode-map (kbd "<leader>p") 'projectile-command-map)
