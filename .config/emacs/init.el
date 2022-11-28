@@ -129,6 +129,14 @@
   :config (projectile-mode +1)
   )
 
+;; Doom modeline
+(use-package doom-modeline
+  :init (doom-modeline-mode 1)
+  )
+
+;; All the icons
+(use-package all-the-icons)
+
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
 (setq inhibit-splash-screen t)
