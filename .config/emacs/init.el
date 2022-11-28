@@ -32,6 +32,18 @@
   :custom (evil-want-C-u-scroll t)
   :init (setq evil-want-keybinding nil)
   :config (evil-mode 1) (evil-set-undo-system 'undo-tree)
+  (evil-set-leader 'normal (kbd "SPC"))
+  (evil-define-key 'normal 'global
+    (kbd "<leader>fs") 'save-buffer
+    (kbd "<leader>ff") 'helm-find-files
+    (kbd "<leader>fr") 'helm-recentf
+    (kbd "<leader>gs") 'magit-status
+    (kbd "<leader>gy") 'yadm
+    (kbd "<leader>qQ") 'kill-emacs
+    (kbd "<leader>qq") 'save-buffers-kill-terminal
+    )
+(evil-define-key 'normal lsp-mode-map (kbd ",") lsp-command-map)
+(evil-define-key 'normal projectile-mode-map (kbd "<leader>p") 'projectile-command-map)
   )
 (use-package evil-collection
   :after evil
@@ -94,7 +106,6 @@
 	     :hook (c-mode python-mode)
 	     )
 (use-package lsp-ui)
-(evil-define-key 'normal lsp-mode-map (kbd "\\") lsp-command-map)
 
 ;; Python mode
 (use-package python-mode)
@@ -117,7 +128,6 @@
 (use-package projectile
   :config (projectile-mode +1)
   )
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
