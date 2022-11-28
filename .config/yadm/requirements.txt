@@ -12,6 +12,7 @@ firefox
 fzf
 git
 gitflow-avh
+glab
 gnupg
 kitty
 lf
