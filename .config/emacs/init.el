@@ -110,6 +110,9 @@
 ;; Python mode
 (use-package python-mode)
 
+;; Python mode
+(use-package lua-mode)
+
 ;; Which key
 (use-package which-key
   :config (which-key-mode)
