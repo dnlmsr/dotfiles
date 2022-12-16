@@ -158,6 +158,17 @@ local function set_wallpaper(s)
             wallpaper = wallpaper(s)
         end
         gears.wallpaper.maximized(wallpaper, s, false)
+
+	local pywal_wallpaper = gears.filesystem.get_xdg_cache_home().."wal/wal"
+	if gears.filesystem.file_readable(pywal_wallpaper) then
+	   local file = io.open(pywal_wallpaper, "rb")
+	   local content = file:read("*all")
+	   file:close()
+	   if content ~= wallpaper then
+	      naughty.notify({ preset = naughty.config.presets.critical, title = "Wallpaper from pywal differs", text = content })
+	      awful.spawn("wal -i "..wallpaper)
+	   end
+	end
     end
 end
 
