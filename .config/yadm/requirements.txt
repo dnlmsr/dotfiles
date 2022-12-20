@@ -7,6 +7,7 @@ awesome
 bottom
 clang
 cmake
+docker
 dunst
 emacs
 firefox
@@ -16,6 +17,7 @@ gitflow-avh
 glab
 gnupg
 kitty
+kubectl
 lf
 maim
 man-db
@@ -26,6 +28,7 @@ noto-fonts-emoji
 openssh
 pasystray
 pavucontrol
+postgresql-libs
 python-pip
 python-pywal
 qalculate-gtk
