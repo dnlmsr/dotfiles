@@ -11,7 +11,7 @@ else
 fi
 
 # Install dependencies
-cat ~/.config/yadm/requirements.txt | paru -Syyu --needed --noconfirm -
+cat ~/.config/yadm/requirements.txt | xargs paru -Syyu --noconfirm
 
 # Enable user daemons
 systemctl --user enable --now emacs.service
