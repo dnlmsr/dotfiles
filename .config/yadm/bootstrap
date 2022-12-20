@@ -1,7 +1,7 @@
 #!/bin/sh
 # Install paru AUR helper
 sudo pacman -S --needed base-devel rust --noconfirm
-git clone https://aur.archlinux.org/paru.git ~/paru
+git clone https://aur.archlinux.org/paru-bin.git ~/paru
 cd ~/paru
 makepkg -si --noconfirm && cd ~ && rm -rf ~/paru
 
