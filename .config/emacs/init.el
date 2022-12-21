@@ -63,6 +63,11 @@
 ;; Magit
 (use-package magit)
 
+;; Rust setup
+(use-package rustic
+  :custom (rustic-format-trigger 'on-save)
+  )
+
 ;; Kconfig mode
 (use-package kconfig-mode)
 
