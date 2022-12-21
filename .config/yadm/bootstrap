@@ -14,8 +14,8 @@ fi
 cat ~/.config/yadm/requirements.txt | xargs paru -Syyu --noconfirm
 
 # Enable user daemons
-systemctl --user enable --now emacs.service
-systemctl --user enable --now trash-empty.timer
+systemctl --user --no-block enable --now emacs.service
+systemctl --user --no-block enable --now trash-empty.timer
 
 # Install oh-my-zsh
 chsh -s /usr/bin/zsh
