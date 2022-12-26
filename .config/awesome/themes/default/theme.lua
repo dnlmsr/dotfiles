@@ -4,6 +4,7 @@
 
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
+local awful = require("awful")
 local dpi = xresources.apply_dpi
 
 local gfs = require("gears.filesystem")
@@ -12,6 +13,18 @@ local themes_path = gfs.get_configuration_dir() .. "themes/"
 local theme = {}
 
 local xtheme = xresources.get_current_theme()
+
+theme.wallpaper = "/usr/share/backgrounds/archlinux/awesome.png"
+
+local pywal_wallpaper = gfs.get_xdg_cache_home().."wal/wal"
+if gfs.file_readable(pywal_wallpaper) then
+   local file = io.open(pywal_wallpaper, "rb")
+   local content = file:read("*all")
+   file:close()
+   if content ~= theme.wallpaper then
+      os.execute("wal -i "..theme.wallpaper)
+   end
+end
 
 theme.font          = "sans 8"
 
@@ -99,7 +112,6 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = gfs.get_xdg_data_home().."backgrounds/desertno.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"

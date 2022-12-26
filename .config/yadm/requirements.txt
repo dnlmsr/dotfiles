@@ -1,6 +1,7 @@
 acpid
 adobe-source-code-pro-fonts
 arandr
+archlinux-wallpaper
 autorandr
 awesome
 bottom
