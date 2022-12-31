@@ -4,6 +4,7 @@ arandr
 archlinux-wallpaper
 autorandr
 awesome
+borg
 bottom
 cups
 dunst
@@ -35,6 +36,7 @@ tmpmail
 trash-cli
 udiskie
 udisks2
+vorta
 xclip
 xdg-ninja
 xorg-server
