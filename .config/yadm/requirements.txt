@@ -27,6 +27,10 @@ noto-fonts-emoji
 openssh
 pasystray
 pavucontrol
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulseaudio
 python-pywal
 qalculate-gtk
 rofi
@@ -37,6 +41,7 @@ trash-cli
 udiskie
 udisks2
 vorta
+wireplumber
 xclip
 xdg-ninja
 xorg-server
