@@ -106,9 +106,15 @@
   :hook (company-mode . company-box-mode)
   )
 
+;; Python mode
+(use-package python-mode)
+
 ;; LSP mode
 (use-package flycheck)
-(use-package lsp-mode)
+(use-package lsp-mode
+  :custom (lsp-pylsp-plugins-pylint-enabled t)
+  :hook (python-mode)
+  )
 (use-package lsp-ui)
 
 ;; Which key
