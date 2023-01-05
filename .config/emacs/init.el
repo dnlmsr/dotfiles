@@ -62,7 +62,9 @@
 
 ;; Magit
 (use-package magit
-  :hook turn-on-magit-gitflow)
+  :hook turn-on-magit-gitflow
+  :custom (magit-revision-show-gravatars t)
+  )
 (use-package magit-gitflow)
 
 ;; Rust setup
