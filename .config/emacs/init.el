@@ -111,6 +111,9 @@
 ;; Python mode
 (use-package python-mode)
 
+;; Pyvenv
+(use-package pyvenv)
+
 ;; LSP mode
 (use-package flycheck)
 (use-package lsp-mode
