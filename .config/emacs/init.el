@@ -61,7 +61,9 @@
   )
 
 ;; Magit
-(use-package magit)
+(use-package magit
+  :custom (magit-revision-show-gravatars t)
+  )
 
 ;; Rust setup
 (use-package rustic
@@ -104,6 +106,12 @@
   :hook (company-mode . company-box-mode)
   )
 
+;; Python mode
+(use-package python-mode)
+
+;; Pyvenv
+(use-package pyvenv)
+
 ;; LSP mode
 (use-package flycheck)
 (use-package lsp-mode
@@ -111,9 +119,6 @@
 	     :hook (c-mode python-mode)
 	     )
 (use-package lsp-ui)
-
-;; Python mode
-(use-package python-mode)
 
 ;; Python mode
 (use-package lua-mode)

@@ -30,6 +30,10 @@ pasystray
 pavucontrol
 postgresql-libs
 python-pip
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulseaudio
 python-pywal
 qalculate-gtk
 rofi
@@ -39,6 +43,7 @@ tmpmail
 trash-cli
 udiskie
 udisks2
+wireplumber
 xclip
 xdg-ninja
 xorg-server
