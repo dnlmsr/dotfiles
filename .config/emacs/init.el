@@ -156,6 +156,14 @@
 ;; All the icons
 (use-package all-the-icons)
 
+;; Format all the code
+(use-package format-all
+  :hook (
+	 c-mode
+	 python-mode
+	 ) (format-all-mode . format-all-ensure-formatter)
+  )
+
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
 (setq inhibit-splash-screen t)
