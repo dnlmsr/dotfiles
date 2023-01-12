@@ -117,6 +117,9 @@
 
 ;; Pyvenv
 (use-package pyvenv)
+(use-package pyvenv-auto
+  :hook (python-mode . pyvenv-auto-run)
+  )
 
 ;; LSP mode
 (use-package flycheck)
