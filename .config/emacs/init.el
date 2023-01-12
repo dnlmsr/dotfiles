@@ -161,6 +161,7 @@
   :hook (
 	 c-mode
 	 python-mode
+	 json-mode
 	 ) (format-all-mode . format-all-ensure-formatter)
   )
 
