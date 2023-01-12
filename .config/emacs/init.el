@@ -45,9 +45,15 @@
 (evil-define-key 'normal lsp-mode-map (kbd ",") lsp-command-map)
 (evil-define-key 'normal projectile-mode-map (kbd "<leader>p") 'projectile-command-map)
   )
+
 (use-package evil-collection
   :after evil
   :config (evil-collection-init)
+  )
+
+(use-package evil-surround
+  :ensure t
+  :config (global-evil-surround-mode 1)
   )
 
 ;; Undo tree
