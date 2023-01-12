@@ -28,12 +28,13 @@ noto-fonts-emoji
 openssh
 pasystray
 pavucontrol
-postgresql-libs
-python-pip
 pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulseaudio
+postgresql-libs
+prettier
+python-pip
 python-pywal
 qalculate-gtk
 rofi
