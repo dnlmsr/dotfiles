@@ -42,8 +42,8 @@
     (kbd "<leader>qQ") 'kill-emacs
     (kbd "<leader>qq") 'save-buffers-kill-terminal
     )
-(evil-define-key 'normal lsp-mode-map (kbd ",") lsp-command-map)
-(evil-define-key 'normal projectile-mode-map (kbd "<leader>p") 'projectile-command-map)
+  (evil-define-key 'normal lsp-mode-map (kbd ",") lsp-command-map)
+  (evil-define-key 'normal projectile-mode-map (kbd "<leader>p") 'projectile-command-map)
   )
 
 (use-package evil-collection
@@ -124,9 +124,9 @@
 ;; LSP mode
 (use-package flycheck)
 (use-package lsp-mode
-	     :custom (lsp-pylsp-plugins-pylint-enabled t)
-	     :hook (c-mode python-mode)
-	     )
+  :custom (lsp-pylsp-plugins-pylint-enabled t)
+  :hook (c-mode python-mode)
+  )
 (use-package lsp-ui)
 
 ;; Python mode
