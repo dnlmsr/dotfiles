@@ -39,6 +39,7 @@ python-pywal
 qalculate-gtk
 rofi
 rofi-calc
+rofimoji
 sxiv
 tmpmail
 trash-cli

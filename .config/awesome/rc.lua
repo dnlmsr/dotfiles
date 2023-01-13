@@ -335,6 +335,9 @@ globalkeys = gears.table.join(
     awful.key({modkey},"c", function() awful.spawn("rofi -show calc") end,
               {description="run rofi calc", group="launcher"}),
 
+    awful.key({modkey},"z", function() awful.spawn("rofimoji") end,
+              {description="run emoji keyboard", group="launcher"}),
+
     awful.key({modkey},"e", function() awful.spawn("emacsclient -create-frame --alternate-editor='nvim'") end,
               {description="run emacs", group="launcher"}),
 
