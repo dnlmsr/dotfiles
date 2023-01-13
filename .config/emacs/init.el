@@ -165,6 +165,8 @@
 	 c-mode
 	 python-mode
 	 json-mode
+	 sql-mode
+	 emacs-lisp-mode
 	 ) (format-all-mode . format-all-ensure-formatter)
   )
 
