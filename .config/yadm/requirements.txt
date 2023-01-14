@@ -7,6 +7,7 @@ awesome
 borg
 bottom
 cups
+docker
 dunst
 emacs
 fail2ban
@@ -31,10 +32,12 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulseaudio
+python-pip
 python-pywal
 qalculate-gtk
 rofi
 rofi-calc
+rofimoji
 sxiv
 tmpmail
 trash-cli

@@ -42,12 +42,18 @@
     (kbd "<leader>qQ") 'kill-emacs
     (kbd "<leader>qq") 'save-buffers-kill-terminal
     )
-(evil-define-key 'normal lsp-mode-map (kbd ",") lsp-command-map)
-(evil-define-key 'normal projectile-mode-map (kbd "<leader>p") 'projectile-command-map)
+  (evil-define-key 'normal lsp-mode-map (kbd ",") lsp-command-map)
+  (evil-define-key 'normal projectile-mode-map (kbd "<leader>p") 'projectile-command-map)
   )
+
 (use-package evil-collection
   :after evil
   :config (evil-collection-init)
+  )
+
+(use-package evil-surround
+  :ensure t
+  :config (global-evil-surround-mode 1)
   )
 
 ;; Undo tree
@@ -108,6 +114,9 @@
 
 ;; Pyvenv
 (use-package pyvenv)
+(use-package pyvenv-auto
+  :hook (python-mode . pyvenv-auto-run)
+  )
 
 ;; LSP mode
 (use-package flycheck)
@@ -116,6 +125,9 @@
   :hook (python-mode)
   )
 (use-package lsp-ui)
+
+;; Python mode
+(use-package lua-mode)
 
 ;; Which key
 (use-package which-key
@@ -146,6 +158,14 @@
 ;; All the icons
 (use-package all-the-icons)
 
+;; Format all the code
+(use-package format-all
+  :hook (
+	 python-mode
+	 emacs-lisp-mode
+	 ) (format-all-mode . format-all-ensure-formatter)
+  )
+
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
 (setq inhibit-splash-screen t)
@@ -154,7 +174,7 @@
 (setq initial-major-mode 'fundamental-mode)
 
 ;; Turn off UI elements
-; (menu-bar-mode -1)
+(menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 

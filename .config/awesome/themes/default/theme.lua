@@ -14,10 +14,15 @@ local theme = {}
 
 local xtheme = xresources.get_current_theme()
 
-theme.wallpaper = gfs.get_xdg_data_home().."backgrounds/desertno.jpg"
+theme.wallpaper = "/usr/share/backgrounds/archlinux/awesome.png"
 
-local pywal_wallpaper = gfs.get_xdg_cache_home().."wal/wal"
-if gfs.file_readable(pywal_wallpaper) then
+function run_pywal()
+   local pywal_wallpaper = gfs.get_xdg_cache_home().."wal/wal"
+   if not gfs.file_readable(pywal_wallpaper) then
+      os.execute("wal -i "..theme.wallpaper)
+      return
+   end
+
    local file = io.open(pywal_wallpaper, "rb")
    local content = file:read("*all")
    file:close()
@@ -25,6 +30,8 @@ if gfs.file_readable(pywal_wallpaper) then
       os.execute("wal -i "..theme.wallpaper)
    end
 end
+
+run_pywal()
 
 theme.font          = "sans 8"
 
