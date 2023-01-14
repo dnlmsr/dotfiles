@@ -72,20 +72,15 @@
   :custom (rustic-format-trigger 'on-save)
   )
 
-;; Tramp
+;; Setup yadm tramp method
 (setenv "SHELL" "/bin/bash")
-(use-package tramp
-  ;; Setup yadm method
-  :config (add-to-list 'tramp-methods
-		       '("yadm"
-			 (tramp-login-program "yadm")
-			 (tramp-login-args (("enter")))
-			 (tramp-login-env (("SHELL") ("/bin/sh")))
-			 (tramp-remote-shell "/bin/sh")
-			 (tramp-remote-shell-args ("-c"))
-			 )
-		       )
-  )
+(add-to-list 'tramp-methods
+	     '("yadm"
+	       (tramp-login-program "yadm")
+	       (tramp-login-args (("enter")))
+	       (tramp-login-env (("SHELL") ("/bin/sh")))
+	       (tramp-remote-shell "/bin/sh")
+	       (tramp-remote-shell-args ("-c"))))
 
 ;; Setup yadm command
 (defun yadm ()
