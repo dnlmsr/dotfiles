@@ -159,10 +159,11 @@
 (use-package format-all
   :hook (
 	 c-mode
-	 python-mode
-	 json-mode
-	 sql-mode
 	 emacs-lisp-mode
+	 json-mode
+	 markdown-mode
+	 python-mode
+	 sql-mode
 	 ) (format-all-mode . format-all-ensure-formatter)
   )
 
