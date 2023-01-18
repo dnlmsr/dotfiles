@@ -167,6 +167,10 @@
 	 ) (format-all-mode . format-all-ensure-formatter)
   )
 
+;; Docker
+(use-package docker)
+(use-package dockerfile-mode)
+
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
 (setq inhibit-splash-screen t)
