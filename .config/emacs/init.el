@@ -68,7 +68,9 @@
 
 ;; Magit
 (use-package magit
-  :custom (magit-revision-show-gravatars t)
+  :custom
+  (magit-revision-show-gravatars t)
+  (magit-diff-refine-hunk 'all)
   )
 
 ;; Rust setup
