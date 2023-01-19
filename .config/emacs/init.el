@@ -69,7 +69,9 @@
 ;; Magit
 (use-package magit
   :hook turn-on-magit-gitflow
-  :custom (magit-revision-show-gravatars t)
+  :custom
+  (magit-revision-show-gravatars t)
+  (magit-diff-refine-hunk 'all)
   )
 (use-package magit-gitflow)
 
@@ -77,6 +79,9 @@
 (use-package rustic
   :custom (rustic-format-trigger 'on-save)
   )
+
+;; JSON mode
+(use-package json-mode)
 
 ;; Setup yadm tramp method
 (setenv "SHELL" "/bin/bash")
@@ -139,6 +144,9 @@
   :defer t
   )
 
+;; YAML mode
+(use-package yaml-mode)
+
 ;; Yasnippet
 (use-package yasnippet
   :config (yas-global-mode 1)
@@ -161,10 +169,16 @@
 ;; Format all the code
 (use-package format-all
   :hook (
-	 python-mode
 	 emacs-lisp-mode
+	 json-mode
+	 markdown-mode
+	 python-mode
 	 ) (format-all-mode . format-all-ensure-formatter)
   )
+
+;; Docker
+(use-package docker)
+(use-package dockerfile-mode)
 
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
