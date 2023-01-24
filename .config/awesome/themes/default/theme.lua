@@ -14,7 +14,7 @@ local theme = {}
 
 local xtheme = xresources.get_current_theme()
 
-theme.wallpaper = "/usr/share/backgrounds/archlinux/awesome.png"
+theme.wallpaper = gfs.get_xdg_data_home().."backgrounds/desertno.jpg"
 
 function run_pywal()
    local pywal_wallpaper = gfs.get_xdg_cache_home().."wal/wal"
