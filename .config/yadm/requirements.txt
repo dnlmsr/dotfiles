@@ -47,6 +47,7 @@ vorta
 wireplumber
 xclip
 xdg-ninja
+xdotool
 xorg-server
 xorg-xinit
 yadm
