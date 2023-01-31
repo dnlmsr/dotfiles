@@ -127,6 +127,7 @@
 (use-package flycheck)
 (use-package lsp-mode
   :custom (lsp-pylsp-plugins-pylint-enabled t)
+  (lsp-rust-analyzer-cargo-watch-command "clippy")
   :hook (python-mode)
   )
 (use-package lsp-ui)
