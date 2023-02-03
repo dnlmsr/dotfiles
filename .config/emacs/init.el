@@ -166,6 +166,7 @@
 	 markdown-mode
 	 python-mode
 	 sql-mode
+	 yaml-mode
 	 ) (format-all-mode . format-all-ensure-formatter)
   )
 
