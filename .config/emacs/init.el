@@ -39,6 +39,8 @@
     (kbd "<leader>fr") 'helm-recentf
     (kbd "<leader>gs") 'magit-status
     (kbd "<leader>gy") 'yadm
+    (kbd "<leader>bb") 'switch-to-buffer
+    (kbd "<leader>bk") 'kill-buffer
     (kbd "<leader>qQ") 'kill-emacs
     (kbd "<leader>qq") 'save-buffers-kill-terminal
     )
