@@ -40,6 +40,9 @@
     (kbd "<leader>gs") 'magit-status
     (kbd "<leader>gy") 'yadm
     (kbd "<leader>bb") 'switch-to-buffer
+    (kbd "<leader>tt") 'format-all-buffer
+    (kbd "<leader>tr") 'format-all-region
+    (kbd "<leader>te") 'format-all-mode
     (kbd "<leader>bk") 'kill-buffer
     (kbd "<leader>qQ") 'kill-emacs
     (kbd "<leader>qq") 'save-buffers-kill-terminal
