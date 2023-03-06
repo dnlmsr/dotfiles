@@ -4,6 +4,7 @@ arandr
 archlinux-wallpaper
 autorandr
 awesome
+bat
 bottom
 clang
 cmake
@@ -37,6 +38,7 @@ prettier
 python-pip
 python-pywal
 qalculate-gtk
+ripgrep
 rofi
 rofi-calc
 rofimoji
