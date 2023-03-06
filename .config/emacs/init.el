@@ -39,6 +39,11 @@
     (kbd "<leader>fr") 'helm-recentf
     (kbd "<leader>gs") 'magit-status
     (kbd "<leader>gy") 'yadm
+    (kbd "<leader>bb") 'switch-to-buffer
+    (kbd "<leader>tt") 'format-all-buffer
+    (kbd "<leader>tr") 'format-all-region
+    (kbd "<leader>te") 'format-all-mode
+    (kbd "<leader>bk") 'kill-buffer
     (kbd "<leader>qQ") 'kill-emacs
     (kbd "<leader>qq") 'save-buffers-kill-terminal
     )
@@ -124,6 +129,7 @@
 (use-package lsp-mode
   :custom (lsp-pylsp-plugins-pylint-enabled t)
   :hook (c-mode python-mode)
+  (lsp-rust-analyzer-cargo-watch-command "clippy")
   )
 (use-package lsp-ui)
 
