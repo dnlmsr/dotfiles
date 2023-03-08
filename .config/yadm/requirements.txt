@@ -8,6 +8,7 @@ bat
 bottom
 clang
 cmake
+dex
 docker
 dunst
 emacs

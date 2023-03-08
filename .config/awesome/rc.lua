@@ -583,6 +583,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Autostart applications
+awful.spawn.once("dex -a")
 awful.spawn.once("udiskie -Nt")
-awful.spawn.once("pasystray")
-awful.spawn.once("autorandr -c")
