@@ -88,6 +88,7 @@
 ;; JSON mode
 (use-package json-mode)
 
+;; Tramp
 ;; Setup yadm tramp method
 (setenv "SHELL" "/bin/bash")
 (add-to-list 'tramp-methods
@@ -179,6 +180,7 @@
 	 json-mode
 	 markdown-mode
 	 python-mode
+	 yaml-mode
 	 ) (format-all-mode . format-all-ensure-formatter)
   )
 

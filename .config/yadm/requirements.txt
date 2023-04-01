@@ -5,8 +5,10 @@ archlinux-wallpaper
 autorandr
 awesome
 borg
+bat
 bottom
 cups
+dex
 docker
 dunst
 emacs
@@ -32,9 +34,11 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulseaudio
+prettier
 python-pip
 python-pywal
 qalculate-gtk
+ripgrep
 rofi
 rofi-calc
 rofimoji
