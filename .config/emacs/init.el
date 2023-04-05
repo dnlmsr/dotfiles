@@ -185,6 +185,9 @@
 ;; Protobuf
 (use-package protobuf-mode)
 
+;; Rainbow mode
+(use-package rainbow-mode)
+
 ;; TOML mode
 (use-package toml-mode)
 
