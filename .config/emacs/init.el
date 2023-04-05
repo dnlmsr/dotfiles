@@ -174,12 +174,16 @@
 	 sql-mode
 	 yaml-mode
 	 toml-mode
+	 protocol-buffer
 	 ) (format-all-mode . format-all-ensure-formatter)
   )
 
 ;; Docker
 (use-package docker)
 (use-package dockerfile-mode)
+
+;; Protobuf
+(use-package protobuf-mode)
 
 ;; TOML mode
 (use-package toml-mode)
