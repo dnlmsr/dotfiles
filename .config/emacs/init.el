@@ -173,12 +173,16 @@
 	 python-mode
 	 sql-mode
 	 yaml-mode
+	 toml-mode
 	 ) (format-all-mode . format-all-ensure-formatter)
   )
 
 ;; Docker
 (use-package docker)
 (use-package dockerfile-mode)
+
+;; TOML mode
+(use-package toml-mode)
 
 ;; Startup screen
 (setq-default inhibit-startup-screen t)
